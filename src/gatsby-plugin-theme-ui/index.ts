@@ -1,0 +1,265 @@
+// Theme:
+// ___________________________________________________________________
+
+import { darken } from 'polished'
+
+// ___________________________________________________________________
+
+type ThemeShape = {
+  breakpoints: string[]
+  mq: {
+    [key: string]: string
+  }
+  initialColorModeName?: string
+  useColorSchemeMediaQuery?: boolean
+  useBodyStyles?: boolean
+  useRootStyles?: boolean
+  useLocalStorage?: boolean
+  colors: {
+    text: string
+    background: string
+    black: string
+    white: string
+    primary: string
+    secondary: string
+    accent: string
+  }
+  space: string[]
+  gutter: {
+    [key: string]: string | number | number[]
+  }
+  fonts: {
+    [key: string]: string
+  }
+  fontSizes: string[]
+  fontWeights: {
+    [key: string]: number
+  }
+  buttons: {
+    primary: {
+      [key: string]: any
+    }
+    secondary: {
+      [key: string]: any
+    }
+  }
+  strokeWidth: string
+  maxWidth: string
+  siteWidth: string
+  logoHeight: string
+  headerHeight: string
+  iconWidth: string
+  inputHeight: string
+  grid: {
+    [key: string]: string | number | number[]
+  }
+  transition: {
+    [key: string]: string
+  }
+  transform: {
+    matrix: {
+      [key: string]: string
+    }
+  }
+  border: string
+  borderRadius: string
+  shadow: string
+  root: {
+    mouseX: string
+    mouseY: string
+    font: {
+      [key: string]: string
+    }
+    space: {
+      [key: string]: string
+    }
+  }
+}
+
+const breakpoints: string[] = ['768px', '1024px']
+
+const theme: ThemeShape = {
+  breakpoints,
+  mq: {
+    tablet: `(min-width: ${breakpoints[0]})`,
+    desktop: `(min-width: ${breakpoints[1]})`,
+  },
+
+  // Constants
+  // ___________________________________________________________________
+
+  maxWidth: '1200px',
+  siteWidth: '100%',
+  logoHeight: '32px',
+  headerHeight: '75px',
+  iconWidth: '18px',
+  inputHeight: '64px',
+  strokeWidth: '2px',
+
+  // Color palette
+  // ___________________________________________________________________
+
+  colors: {
+    text: '#000000',
+    background: '#ffffff',
+    black: '#000000',
+    white: '#ffffff',
+    primary: '#0F95A7',
+    secondary: '#B3FFF2',
+    accent: '#C8DCE1',
+  },
+
+  // Space
+  // ___________________________________________________________________
+
+  space: [
+    '0', // 0
+    'var(--space-xxs)', // 1
+    'var(--space-xs)', // 2
+    'var(--space-sm)', // 3
+    'var(--space-md)', // 4
+    'var(--space-lg)', // 5
+    'var(--space-xl)', // 6
+    'var(--space-xxl)', // 7
+    '7rem', // 8
+    '10rem', // 9
+    '12rem', // 10
+    '14rem', // 11
+    '16rem', // 12
+    '18rem', // 13
+  ],
+
+  gutter: {
+    mobile: 4,
+    tablet: 5,
+    desktop: 5,
+    vertical: [5, 7],
+    axis: [4, 5],
+  },
+
+  // Typography
+  // ___________________________________________________________________
+
+  fonts: {
+    body: `"Karla", Arial, Liberation Mono, Menlo, Courier, monospace`,
+    heading: `"Karla", Arial, Liberation Mono, Menlo, Courier, monospace`,
+    sans: `"Karla", Arial, Liberation Mono, Menlo, Courier, monospace`,
+    display: `"Saygon", Arial, Liberation Mono, Menlo, Courier, monospace`,
+    mono: `"DMMono", Consolas, Liberation Mono, Menlo, Courier, monospace`,
+  },
+
+  fontSizes: [
+    'var(--text-xs)', // 0
+    'var(--text-sm)', // 1
+    'var(--text-base-size)', // 2
+    'var(--text-md)', // 3
+    'var(--text-lg)', // 4
+    'var(--text-xl)', // 5
+    'var(--text-xxl)', // 6
+    'var(--text-xxxl)', // 7
+  ],
+
+  fontWeights: {
+    light: 300,
+    regular: 400,
+    medium: 500,
+    bold: 600,
+    black: 700,
+  },
+
+  // Button
+  // ___________________________________________________________________
+
+  buttons: {
+    primary: {
+      bg: 'primary',
+      color: 'white',
+      borderRadius: 0,
+      cursor: 'pointer',
+      fontSize: 2,
+      fontWeight: 600,
+      height: '64px',
+      py: 3,
+      px: 5,
+      '&:hover': {
+        bg: darken(0.15, '#0582FF'),
+      },
+    },
+    secondary: {
+      bg: 'transparent',
+      color: 'white',
+      border: '1px solid',
+      borderColor: 'white',
+      borderRadius: 0,
+      cursor: 'pointer',
+      fontWeight: 700,
+      py: 3,
+      px: 4,
+      '&:hover': {
+        bg: 'white',
+        color: 'text',
+      },
+    },
+  },
+
+  // Base
+  // ___________________________________________________________________
+
+  grid: {
+    gap: 2,
+  },
+
+  transition: {
+    all: 'all 0.11s ease-in-out 0s',
+    global: '0.11s ease-in-out 0s',
+  },
+
+  transform: {
+    matrix: {
+      from: 'matrix(1, 0, 0, 1, 24, 0)',
+      to: 'matrix(1, 0, 0, 1, 0, 0)',
+    },
+  },
+
+  border: '1px solid #C8DCE1',
+  borderRadius: '3px',
+  shadow: '0px 2px 1px rgba(0, 0, 0, 0.05)',
+
+  root: {
+    mouseX: 'var(--mouse-x)',
+    mouseY: 'var(--mouse-y)',
+    font: {
+      // Base sizing
+      baseSize: 'var(--text-base-size)',
+      scaleRatio: 'var(--text-scale-ratio)',
+
+      // Type scale
+      xs: 'var(--text-xs)',
+      sm: 'var(--text-sm)',
+      md: 'var(--text-md)',
+      lg: 'var(--text-lg)',
+      xl: 'var(--text-xl)',
+      xxl: 'var(--text-xxl)',
+      xxxl: 'var(--text-xxxl)',
+
+      // Line height
+      headingLineHeight: 'var(--heading-line-height)',
+      bodyLineHeight: 'var(--body-line-height)',
+
+      // Letter spacing
+      headingLetterSpacing: 'var(--heading-letter-spacing)',
+      baseLetterSpacing: 'var(--body-letter-spacing)',
+    },
+    space: {
+      xxs: 'var(--space-xxs)',
+      xs: 'var(--space-xs)',
+      sm: 'var(--space-sm)',
+      md: 'var(--space-md)',
+      lg: 'var(--space-lg)',
+      xl: 'var(--space-xl)',
+      xxl: 'var(--space-xxl)',
+    },
+  },
+}
+
+export default theme
