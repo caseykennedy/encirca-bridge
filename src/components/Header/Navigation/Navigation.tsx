@@ -41,7 +41,7 @@ const Navigation = () => {
         <DarkModeSwitch
           moonColor={theme.colors.text}
           sunColor={theme.colors.primary}
-          checked={isDark}
+          checked={true}
           onChange={toggleDarkMode}
           size={20}
         />

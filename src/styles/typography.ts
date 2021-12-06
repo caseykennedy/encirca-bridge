@@ -1,5 +1,4 @@
 // Typography
-
 // ___________________________________________________________________
 
 import { css } from 'styled-components'
@@ -59,7 +58,8 @@ const Typography = css`
   @font-face {
     font-family: 'Karla';
     src: url(${KarlaLightEot});
-    src: url(${KarlaLightWoff}) format('woff'),
+    src: url(${KarlaLightWoff2}) format('woff2'),
+      url(${KarlaLightWoff}) format('woff'),
       url(${KarlaLightOtf}) format('opentype'),
       url(${KarlaLightEot}?#iefix) format('embedded-opentype');
     font-weight: 300;
@@ -409,5 +409,3 @@ const Typography = css`
 `
 
 export default Typography
-
-// ___________________________________________________________________
