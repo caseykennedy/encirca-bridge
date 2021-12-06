@@ -20,19 +20,19 @@ const GlobalStyles = createGlobalStyle`
   ${Widgets}
 
   ::-webkit-scrollbar {
-    width: ${theme.space[4]};
+    /* width: ${theme.space[4]}; */
   }
 
   /* Track */
   ::-webkit-scrollbar-track {
-    background: ${theme.colors.black};
+    /* background: ${theme.colors.black}; */
   }
 
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: ${theme.colors.background};
+    /* background: ${theme.colors.background};
     border-left: ${theme.border};
-    border-color: ${theme.colors.black};
+    border-color: ${theme.colors.black}; */
   }
 
   /* Handle on hover */

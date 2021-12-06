@@ -9,18 +9,17 @@ import theme from '../../gatsby-plugin-theme-ui'
 // ___________________________________________________________________
 
 export const Header = styled(Box)`
-  background: ${theme.colors.white};
+  background: ${theme.colors.background};
   border-bottom: ${theme.border};
-  box-shadow: ${theme.shadow};
   overflow: visible;
   width: 100%;
   position: sticky;
   top: 0;
   z-index: 9999;
 
-  a {
+  /* a {
     color: ${theme.colors.black};
-  }
+  } */
 
   .header-inner {
     display: flex;
@@ -30,7 +29,7 @@ export const Header = styled(Box)`
     overflow: visible;
     margin: 0 auto;
     max-width: ${theme.maxWidth};
-    height: ${theme.headerHeight};
+    /* height: ${theme.headerHeight}; */
     width: 100%;
   }
 `
@@ -38,28 +37,15 @@ export const Header = styled(Box)`
 export const Menu = styled(Flex)`
   align-items: center;
   justify-content: flex-end;
-
-  .symbol {
-    margin-left: ${theme.space[5]};
-  }
 `
 
 export const Logo = styled(Flex)`
   display: flex;
   align-items: center;
+  padding-top: ${theme.space[1]};
 
-  .wordmark {
-    font-weight: 600;
-    text-decoration: none;
-    position: relative;
-  }
-
-  .superscript {
-    font-size: ${theme.fontSizes[1]};
-    white-space: nowrap;
-    position: relative;
-    top: -3px;
-    left: 10px;
+  a {
+    display: flex;
   }
 `
 

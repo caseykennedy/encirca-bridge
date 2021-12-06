@@ -30,25 +30,22 @@ const RootVariables = css`
 
     /* set base values */
     --text-base-size: 1.1em;
-    --text-scale-ratio: 1.369;
+    --text-scale-ratio: 1.225;
 
     /* line-height */
     --heading-line-height: 1.25;
-    --body-line-height: 1.5;
+    --body-line-height: 1.65;
 
     /* letter-spacing */
-    --heading-letter-spacing: -0.01em;
-    --body-letter-spacing: -0.01em;
+    --heading-letter-spacing: 0em;
+    --body-letter-spacing: 0em;
 
     @media ${theme.mq.tablet} {
-      --text-base-size: 1.15em;
-      --body-line-height: 1.25; 
+      --text-base-size: 1.1em;
     }
 
     /* type scale */
-    --text-xs: calc(
-      1em / (var(--text-scale-ratio) * var(--text-scale-ratio))
-    );
+    --text-xs: calc(1em / (var(--text-scale-ratio) * var(--text-scale-ratio)));
     --text-sm: calc(1em / var(--text-scale-ratio));
     --text-md: calc(1em * var(--text-scale-ratio));
     --text-lg: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio));

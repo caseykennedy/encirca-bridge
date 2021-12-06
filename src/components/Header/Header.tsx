@@ -6,7 +6,7 @@ import { Link } from 'gatsby'
 import HamburgerMenu from 'react-hamburger-menu'
 
 // Theme + ui
-import { Box, Flex, Text } from 'theme-ui'
+import { Flex, Text, useColorMode } from 'theme-ui'
 import theme from '../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
 
@@ -14,6 +14,7 @@ import * as S from './styles.scss'
 import Navigation from './Navigation'
 import MobileNav from './MobileNav'
 import Modal from '../Modal'
+import Logo from '../SVG/Logo'
 
 // ___________________________________________________________________
 
@@ -22,15 +23,13 @@ const Header = () => {
   const toggleMenu = () => setNavOpen(!isNavOpen)
   return (
     <>
-      <S.Header px={theme.gutter.axis}>
+      <S.Header px={theme.gutter.axis} py={4}>
         <Flex className="header-inner">
-          <Link to="/" className="logo" aria-label="dotNFT, back to home">
-            <S.Logo onClick={() => setNavOpen(false)}>
-              <Text className="wordmark" aria-label="dotNFT">
-                Bridge
-              </Text>
-            </S.Logo>
-          </Link>
+          <S.Logo onClick={() => setNavOpen(false)}>
+            <Link to="/" aria-label="Bridge, back to home">
+              <Logo />
+            </Link>
+          </S.Logo>
 
           <S.Menu>
             <Navigation />

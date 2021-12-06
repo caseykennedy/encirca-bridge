@@ -5,6 +5,12 @@
 import { css } from 'styled-components'
 import theme from '../gatsby-plugin-theme-ui'
 
+// Karla Light
+import KarlaLightEot from './fonts/Karla-Light.eot'
+import KarlaLightOtf from './fonts/Karla-Light.otf'
+import KarlaLightWoff from './fonts/Karla-Light.woff'
+import KarlaLightWoff2 from './fonts/Karla-Light.woff2'
+
 // Karla Regular
 import KarlaRegularEot from './fonts/Karla-Regular.eot'
 import KarlaRegularOtf from './fonts/Karla-Regular.otf'
@@ -28,10 +34,17 @@ import KarlaBoldOtf from './fonts/Karla-Bold.otf'
 import KarlaBoldWoff from './fonts/Karla-Bold.woff'
 import KarlaBoldWoff2 from './fonts/Karla-Bold.woff2'
 
-// CA Saygon Regular
-import SaygonRegularEot from './fonts/CA-Saygon-Regular.eot'
-import SaygonRegularOtf from './fonts/CA-Saygon-Regular.otf'
-import SaygonRegularWoff from './fonts/CA-Saygon-Regular.woff'
+// Neue Machina Light
+import NeueMachinaLightEot from './fonts/PPNeueMachina-Light.eot'
+import NeueMachinaLightOtf from './fonts/PPNeueMachina-Light.otf'
+import NeueMachinaLightWoff from './fonts/PPNeueMachina-Light.woff'
+import NeueMachinaLightWoff2 from './fonts/PPNeueMachina-Light.woff2'
+
+// Neue Machina Regular
+import NeueMachinaRegEot from './fonts/PPNeueMachina-Regular.eot'
+import NeueMachinaRegOtf from './fonts/PPNeueMachina-Regular.otf'
+import NeueMachinaRegWoff from './fonts/PPNeueMachina-Regular.woff'
+import NeueMachinaRegWoff2 from './fonts/PPNeueMachina-Regular.woff2'
 
 // DM Mono Regular
 import DMMonoRegularEot from './fonts/DMMono-Regular.eot'
@@ -42,6 +55,18 @@ import DMMonoRegularOtf from './fonts/DMMono-Regular.otf'
 // ___________________________________________________________________
 
 const Typography = css`
+  /* Karla Light */
+  @font-face {
+    font-family: 'Karla';
+    src: url(${KarlaLightEot});
+    src: url(${KarlaLightWoff}) format('woff'),
+      url(${KarlaLightOtf}) format('opentype'),
+      url(${KarlaLightEot}?#iefix) format('embedded-opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+
   /* Karla Regular */
   @font-face {
     font-family: 'Karla';
@@ -93,13 +118,27 @@ const Typography = css`
     font-display: swap;
   }
 
-  /* CA Saygon Regular */
+  /* Neue Machina Light */
   @font-face {
-    font-family: 'Saygon';
-    src: url(${SaygonRegularEot});
-    src: url(${SaygonRegularWoff}) format('woff'),
-      url(${SaygonRegularOtf}) format('opentype'),
-      url(${SaygonRegularEot}?#iefix) format('embedded-opentype');
+    font-family: 'Neue Machina';
+    src: url(${NeueMachinaLightEot});
+    src: url(${NeueMachinaLightWoff2}) format('woff2'),
+      url(${NeueMachinaLightWoff}) format('woff'),
+      url(${NeueMachinaLightOtf}) format('opentype'),
+      url(${NeueMachinaLightEot}?#iefix) format('embedded-opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  /* Neue Machina Regular */
+  @font-face {
+    font-family: 'Neue Machina';
+    src: url(${NeueMachinaRegEot});
+    src: url(${NeueMachinaRegWoff2}) format('woff2'),
+      url(${NeueMachinaRegWoff}) format('woff'),
+      url(${NeueMachinaRegOtf}) format('opentype'),
+      url(${NeueMachinaRegEot}?#iefix) format('embedded-opentype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -140,7 +179,7 @@ const Typography = css`
 
     font-size: ${theme.fontSizes[2]};
     font-family: ${theme.fonts.body};
-    font-weight: ${theme.fontWeights.medium};
+    font-weight: ${theme.fontWeights.light};
     line-height: ${theme.root.font.bodyLineHeight};
     letter-spacing: ${theme.root.font.baseLetterSpacing};
 
@@ -166,11 +205,11 @@ const Typography = css`
   h5,
   h6 {
     font-family: ${theme.fonts.heading};
-    font-weight: ${theme.fontWeights.medium};
+    font-weight: 300;
     line-height: ${theme.root.font.headingLineHeight};
     letter-spacing: ${theme.root.font.headingLetterSpacing};
+    margin: 0 0 ${theme.space[3]};
     transition: ${theme.transition.all};
-    margin: 0 0 ${theme.space[2]};
   }
 
   .text--xxxl {
@@ -238,9 +277,10 @@ const Typography = css`
   p,
   .text--base {
     font-size: ${theme.fontSizes[2]};
+    margin: 0 0 ${theme.space[5]};
 
     &:last-child {
-      margin-bottom: 0;
+      margin: 0;
     }
 
     a {
@@ -265,7 +305,7 @@ const Typography = css`
     font-weight: 800;
   }
 
-  .text--small {
+  small {
     font-size: calc(${theme.fontSizes[0]});
 
     @media ${theme.mq.tablet} {
@@ -316,7 +356,7 @@ const Typography = css`
     } */
 
     &.text--link {
-      font-weight: 600;
+      font-weight: 500;
       transform: text-decoration ${theme.transition.global};
       text-decoration: underline;
       text-decoration-thickness: 2px;

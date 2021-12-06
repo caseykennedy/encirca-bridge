@@ -17,6 +17,7 @@ import Twitter from './SVG/Twitter'
 import NextArrow from './SVG/NextArrow'
 import Bag from './SVG/Bag'
 import Carat from './SVG/Carat'
+import Chevron from './SVG/Chevron'
 
 import Document from './SVG/Document'
 import Download from './SVG/Download'
@@ -52,6 +53,12 @@ const Icon = ({ name, className, color, fas }: Props) => {
       return (
         <IconStyle color={color} className={className}>
           <Carat />
+        </IconStyle>
+      )
+    case 'chevron':
+      return (
+        <IconStyle color={color} className={className}>
+          <Chevron />
         </IconStyle>
       )
     case 'document':

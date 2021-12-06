@@ -20,6 +20,7 @@ type ThemeShape = {
     background: string
     black: string
     white: string
+    gray: string
     primary: string
     secondary: string
     accent: string
@@ -39,7 +40,7 @@ type ThemeShape = {
     primary: {
       [key: string]: any
     }
-    secondary: {
+    outline: {
       [key: string]: any
     }
   }
@@ -85,27 +86,19 @@ const theme: ThemeShape = {
     desktop: `(min-width: ${breakpoints[1]})`,
   },
 
-  // Constants
-  // ___________________________________________________________________
-
-  maxWidth: '1200px',
-  siteWidth: '100%',
-  logoHeight: '32px',
-  headerHeight: '75px',
-  iconWidth: '18px',
-  inputHeight: '64px',
-  strokeWidth: '2px',
-
   // Color palette
   // ___________________________________________________________________
 
   colors: {
-    text: '#000000',
-    background: '#ffffff',
+    text: '#EEEEEE',
+    background: '#000B18',
+
     black: '#000000',
-    white: '#ffffff',
+    white: '#FFFFFF',
+    gray: '#999999',
+
     primary: '#0F95A7',
-    secondary: '#B3FFF2',
+    secondary: '#26476C',
     accent: '#C8DCE1',
   },
 
@@ -144,7 +137,7 @@ const theme: ThemeShape = {
     body: `"Karla", Arial, Liberation Mono, Menlo, Courier, monospace`,
     heading: `"Karla", Arial, Liberation Mono, Menlo, Courier, monospace`,
     sans: `"Karla", Arial, Liberation Mono, Menlo, Courier, monospace`,
-    display: `"Saygon", Arial, Liberation Mono, Menlo, Courier, monospace`,
+    display: `"Neue Machina", Arial, Liberation Mono, Menlo, Courier, monospace`,
     mono: `"DMMono", Consolas, Liberation Mono, Menlo, Courier, monospace`,
   },
 
@@ -173,37 +166,50 @@ const theme: ThemeShape = {
   buttons: {
     primary: {
       bg: 'primary',
+      borderRadius: '4px',
       color: 'white',
-      borderRadius: 0,
       cursor: 'pointer',
-      fontSize: 2,
-      fontWeight: 600,
-      height: '64px',
-      py: 3,
-      px: 5,
-      '&:hover': {
-        bg: darken(0.15, '#0582FF'),
-      },
-    },
-    secondary: {
-      bg: 'transparent',
-      color: 'white',
-      border: '1px solid',
-      borderColor: 'white',
-      borderRadius: 0,
-      cursor: 'pointer',
-      fontWeight: 700,
-      py: 3,
+      display: 'flex',
+      alignItems: 'center',
+      lineHeight: '1',
+      py: 2,
       px: 4,
       '&:hover': {
-        bg: 'white',
-        color: 'text',
+        bg: darken(0.15, '#0F95A7'),
+      },
+    },
+    outline: {
+      bg: 'transparent',
+      borderRadius: '4px',
+      border: '1px solid',
+      borderColor: 'primary',
+      color: 'white',
+      cursor: 'pointer',
+      display: 'flex',
+      alignItems: 'center',
+      lineHeight: '1.5',
+      py: 2,
+      px: 4,
+      '&:hover': {
+        bg: darken(0.25, '#0F95A7'),
       },
     },
   },
 
   // Base
   // ___________________________________________________________________
+
+  border: '1px solid #26476C',
+  borderRadius: '4px',
+  shadow: '0px 2px 1px rgba(0, 0, 0, 0.05)',
+
+  maxWidth: '1200px',
+  siteWidth: '100%',
+  logoHeight: '32px',
+  headerHeight: '80px',
+  iconWidth: '18px',
+  inputHeight: '64px',
+  strokeWidth: '2px',
 
   grid: {
     gap: 2,
@@ -220,10 +226,6 @@ const theme: ThemeShape = {
       to: 'matrix(1, 0, 0, 1, 0, 0)',
     },
   },
-
-  border: '1px solid #C8DCE1',
-  borderRadius: '3px',
-  shadow: '0px 2px 1px rgba(0, 0, 0, 0.05)',
 
   root: {
     mouseX: 'var(--mouse-x)',

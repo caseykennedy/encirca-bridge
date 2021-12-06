@@ -1,15 +1,17 @@
 // 404 Page
-
 // ___________________________________________________________________
 
-// Libraries
 import React from 'react'
-
-// Elements
-import { Box } from 'theme-ui'
+import { Text } from 'theme-ui'
+import theme from '../gatsby-plugin-theme-ui'
+import Section from '../components/Section'
 
 // ___________________________________________________________________
 
-const fourofourPage = () => <Box>404</Box>
+const fourofourPage = () => (
+  <Section>
+    <Text sx={{ fontFamily: 'display', fontSize: 7 }}>404</Text>
+  </Section>
+)
 
 export default fourofourPage

@@ -20,7 +20,7 @@ const Footer = () => (
   <S.Footer>
     <Flex px={theme.gutter.axis} className="footer__inner">
       <Flex className="legal">
-        <Text>&copy;{getYear()} .nft</Text>
+        <Text>&copy;{getYear()} Bridge</Text>
         <Flex>
           <Text mr={3}>
             <Link to="/privacy-policy">Privacy</Link>

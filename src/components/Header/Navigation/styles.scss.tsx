@@ -3,47 +3,50 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
-import { darken } from 'polished'
 import theme from '../../../gatsby-plugin-theme-ui'
 
 // ___________________________________________________________________
 
 export const Nav = styled.nav`
-  display: none;
+  display: flex;
   justify-content: space-between;
   align-items: center;
 
   width: 100%;
 
-  @media ${theme.mq.tablet} {
-    display: flex;
-  }
+  .faq {
+    color: ${theme.colors.gray};
+    font-weight: 500;
 
-  a {
-    color: ${theme.colors.text};
-    text-decoration: none;
-    margin-left: ${theme.space[5]};
+    @media ${theme.mq.tablet} {
+      display: flex;
+    }
 
     &.active,
     &:hover {
       color: ${theme.colors.primary};
     }
+
+    span {
+      svg {
+        fill: ${theme.colors.gray};
+      }
+    }
   }
 
-  .button {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  .btn {
+    span {
+      margin-left: ${theme.space[5]};
 
-    background: ${theme.colors.primary};
-    /* border: ${theme.border}; */
-    border-radius: ${theme.borderRadius};
-    color: ${theme.colors.white};
-    padding: ${theme.space[3]} ${theme.space[4]};
+      svg {
+        fill: ${theme.colors.gray};
+      }
+    }
 
     &:hover {
-      background: ${darken(0.15, theme.colors.primary)};
-      color: ${theme.colors.white};
+      svg {
+        fill: ${theme.colors.white};
+      }
     }
   }
 `
