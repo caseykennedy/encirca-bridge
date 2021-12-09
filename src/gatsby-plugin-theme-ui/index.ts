@@ -126,8 +126,8 @@ const theme: ThemeShape = {
     mobile: 4,
     tablet: 5,
     desktop: 5,
-    vertical: [5, 7],
-    axis: [4, 5],
+    vertical: [6, 7],
+    axis: [5, 6],
   },
 
   // Typography

@@ -23,6 +23,7 @@ module.exports = {
   siteMetadata: {
     siteUrl: config.siteUrl + pathPrefix,
     pathPrefix,
+    banner: config.bannerUrl,
     title: config.siteTitle,
     titleAlt: config.siteTitleAlt,
     description: config.siteDescription,
@@ -36,6 +37,7 @@ module.exports = {
     facebook: config.ogSiteName,
   },
   plugins: [
+    'gatsby-plugin-typescript',
     'babel-plugin-styled-components',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-theme-ui',
@@ -53,11 +55,6 @@ module.exports = {
         defaultDataLayer: { platform: 'gatsby' },
       },
     },
-    'gatsby-plugin-image',
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sitemap',
-    // 'gatsby-plugin-typescript',
     {
       resolve: 'gatsby-plugin-eslint',
       options: {
@@ -71,8 +68,7 @@ module.exports = {
         // ...
       },
     },
-    'gatsby-plugin-offline',
-    'gatsby-plugin-netlify',
+    'gatsby-transformer-yaml',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -83,10 +79,23 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
+        name: 'content',
+        path: `${__dirname}/content`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
         name: 'images',
         path: `${__dirname}/src/images`,
       },
     },
+    'gatsby-plugin-image',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sitemap',
+    'gatsby-plugin-offline',
+    'gatsby-plugin-netlify',
     {
       resolve: 'gatsby-plugin-react-svg',
       options: {

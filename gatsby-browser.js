@@ -2,8 +2,6 @@
 
 import React from 'react'
 import Layout from './src/components/Layout'
-
-// Styles + Theme
 import GlobalStyles from './src/styles/global'
 
 // ___________________________________________________________________

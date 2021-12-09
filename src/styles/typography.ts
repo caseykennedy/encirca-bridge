@@ -205,7 +205,7 @@ const Typography = css`
   h5,
   h6 {
     font-family: ${theme.fonts.heading};
-    font-weight: 300;
+    font-weight: 400;
     line-height: ${theme.root.font.headingLineHeight};
     letter-spacing: ${theme.root.font.headingLetterSpacing};
     margin: 0 0 ${theme.space[3]};
@@ -347,8 +347,8 @@ const Typography = css`
 
   a {
     color: inherit;
-    position: relative;
     text-decoration: none;
+    position: relative;
 
     /* &:hover {
       text-decoration: underline;
@@ -356,7 +356,7 @@ const Typography = css`
     } */
 
     &.text--link {
-      font-weight: 500;
+      font-weight: 400;
       transform: text-decoration ${theme.transition.global};
       text-decoration: underline;
       text-decoration-thickness: 2px;

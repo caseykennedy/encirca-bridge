@@ -1,9 +1,8 @@
 // useScript hook
-
 // ___________________________________________________________________
 
 // Core
-import { useState, useEffect, useRef } from 'react'
+import { useEffect } from 'react'
 
 // ___________________________________________________________________
 

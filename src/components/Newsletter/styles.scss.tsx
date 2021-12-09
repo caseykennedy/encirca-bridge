@@ -10,5 +10,7 @@ import theme from '../../gatsby-plugin-theme-ui'
 
 export const Newsletter = styled(Box)`
   border-top: ${theme.border};
-  border-color: ${theme.colors.darkgray};
+  border-color: ${theme.colors.gray};
 `
+
+export default Newsletter
