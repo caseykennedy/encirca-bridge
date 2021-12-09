@@ -59,6 +59,7 @@ export const Footer = styled.footer`
         display: flex;
         flex-direction: column;
         padding-bottom: ${theme.space[10]};
+        gap: ${theme.space[5]};
 
         @media ${theme.mq.tablet} {
           flex-direction: row;
@@ -71,7 +72,6 @@ export const Footer = styled.footer`
           flex-direction: column;
 
           padding: ${theme.space[7]};
-          margin-bottom: ${theme.space[5]};
 
           background: ${theme.colors.background};
           border: ${theme.border};
@@ -81,16 +81,6 @@ export const Footer = styled.footer`
           svg {
             margin: 0 ${theme.space[5]};
             width: 40px;
-          }
-
-          @media ${theme.mq.tablet} {
-            margin-right: ${theme.space[4]};
-            margin-bottom: 0;
-
-            &:last-child {
-              margin-right: 0;
-              margin-left: ${theme.space[4]};
-            }
           }
         }
       }

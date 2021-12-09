@@ -17,9 +17,21 @@ export const Hero = styled(Box)`
       align-items: center;
       flex-direction: column;
       justify-content: space-between;
+      gap: ${theme.space[6]};
+
       box-sizing: content-box;
       margin: 0 auto;
+      padding: 0 ${theme.space[5]};
       max-width: ${theme.maxWidth};
+
+      @media ${theme.mq.tablet} {
+        gap: ${theme.space[6]};
+        padding: 0 ${theme.space[6]};
+      }
+
+      @media ${theme.mq.desktop} {
+        gap: ${theme.space[7]};
+      }
 
       .message {
         flex: 1;
@@ -29,6 +41,10 @@ export const Hero = styled(Box)`
         flex: 1;
         display: flex;
         justify-content: flex-end;
+
+        @media ${theme.mq.desktop} {
+          flex: 1.2;
+        }
 
         svg {
           max-width: 570px;
