@@ -17,6 +17,7 @@ export const Footer = styled.footer`
   width: 100%;
 
   .decorator {
+    opacity: 0.75;
     position: absolute;
     top: 0;
     right: 0;
@@ -67,7 +68,7 @@ export const Footer = styled.footer`
           display: flex;
           flex: 1;
           align-items: center;
-          justify-content: center;
+          flex-direction: column;
 
           padding: ${theme.space[7]};
           margin-bottom: ${theme.space[5]};
@@ -77,8 +78,12 @@ export const Footer = styled.footer`
           border-radius: ${theme.borderRadius};
           text-align: center;
 
+          svg {
+            margin: 0 ${theme.space[5]};
+            width: 40px;
+          }
+
           @media ${theme.mq.tablet} {
-            flex-direction: row;
             margin-right: ${theme.space[4]};
             margin-bottom: 0;
 

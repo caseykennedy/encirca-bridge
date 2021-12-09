@@ -349,6 +349,7 @@ const Typography = css`
     color: inherit;
     text-decoration: none;
     position: relative;
+    white-space: nowrap;
 
     /* &:hover {
       text-decoration: underline;

@@ -77,7 +77,7 @@ type ThemeShape = {
   }
 }
 
-const breakpoints: string[] = ['768px', '1024px']
+const breakpoints: string[] = ['840px', '1024px']
 
 const theme: ThemeShape = {
   breakpoints,
@@ -201,7 +201,7 @@ const theme: ThemeShape = {
 
   border: '1px solid #26476C',
   borderRadius: '4px',
-  shadow: '0px 2px 1px rgba(0, 0, 0, 0.05)',
+  shadow: '0px 3px 1px rgba(0, 0, 0, 0.75)',
 
   maxWidth: '1200px',
   siteWidth: '100%',

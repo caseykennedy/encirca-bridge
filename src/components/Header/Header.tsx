@@ -34,7 +34,7 @@ const Header = () => {
           <S.Menu>
             <Navigation />
 
-            <S.Toggle onClick={toggleMenu} aria-label="toggle menu">
+            {/* <S.Toggle onClick={toggleMenu} aria-label="toggle menu">
               <HamburgerMenu
                 isOpen={!!isNavOpen}
                 menuClicked={toggleMenu}
@@ -46,7 +46,7 @@ const Header = () => {
                 borderRadius={0}
                 animationDuration={0.333}
               />
-            </S.Toggle>
+            </S.Toggle> */}
           </S.Menu>
         </Flex>
       </S.Header>

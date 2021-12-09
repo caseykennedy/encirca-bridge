@@ -11,6 +11,7 @@ import theme from '../../gatsby-plugin-theme-ui'
 export const Header = styled(Box)`
   background: ${theme.colors.background};
   border-bottom: ${theme.border};
+  box-shadow: ${theme.shadow};
   overflow: visible;
   width: 100%;
   position: sticky;

@@ -9,25 +9,40 @@ import { Link } from 'gatsby'
 import { Box, Flex, Text } from 'theme-ui'
 import theme from '../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
-import HandshakeBadge from '../HandshakeBadge'
+import Icon from '../Icons'
 import Logo from '../SVG/Logo'
 
 import Background from '../../../static/bg-footer.svg'
 
 // ___________________________________________________________________
 
-const data = [
+const navLinks = [
   {
-    title: 'Terms & Conditions',
+    name: 'Terms & Conditions',
     path: '/terms-conditions',
   },
   {
-    title: 'Privacy Policy',
+    name: 'Privacy Policy',
     path: '/privacy-policy',
   },
   {
-    title: 'Contact',
+    name: 'Contact',
     path: 'mailto:info@bridge.com',
+  },
+]
+
+const socialLinks = [
+  {
+    name: 'twitter',
+    path: 'http://discord.com',
+  },
+  {
+    name: 'twitter',
+    path: 'http://twitter.com',
+  },
+  {
+    name: 'twitter',
+    path: 'http://github.com',
   },
 ]
 
@@ -39,6 +54,15 @@ const Footer = () => (
       <Flex className="utilities">
         <Flex className="util">
           <h4>Connect with us</h4>
+          <Flex mt={5}>
+            {socialLinks.map((item, idx) => (
+              <Box key={idx}>
+                <a href={item.path}>
+                  <Icon name={item.name} color="white" />
+                </a>
+              </Box>
+            ))}
+          </Flex>
         </Flex>
 
         <Flex className="util">
@@ -47,13 +71,13 @@ const Footer = () => (
       </Flex>
 
       <Flex className="legal">
-        <Box>&copy;{getYear()} Bridge</Box>
+        <Text>&copy;{getYear()} Bridge</Text>
 
         <Flex className="nav">
           <Flex>
-            {data.map((item, idx) => (
+            {navLinks.map((item, idx) => (
               <Text ml={5} key={idx}>
-                <Link to={item.path}>{item.title}</Link>
+                <Link to={item.path}>{item.name}</Link>
               </Text>
             ))}
           </Flex>
@@ -64,7 +88,7 @@ const Footer = () => (
         </Flex>
       </Flex>
     </Flex>
-    
+
     <div className="decorator">
       <Background />
     </div>
