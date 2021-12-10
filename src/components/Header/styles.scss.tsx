@@ -9,7 +9,9 @@ import theme from '../../gatsby-plugin-theme-ui'
 // ___________________________________________________________________
 
 export const Header = styled(Box)`
-  background: ${theme.colors.background};
+  /* background: ${theme.colors.background}; */
+  backdrop-filter: blur(5px);
+  background: rgb(0,11,24, 0.9);
   border-bottom: ${theme.border};
   box-shadow: ${theme.shadow};
   overflow: visible;
