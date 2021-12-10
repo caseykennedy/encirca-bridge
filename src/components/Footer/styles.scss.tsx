@@ -10,11 +10,14 @@ import theme from '../../gatsby-plugin-theme-ui'
 export const Footer = styled.footer`
   font-weight: 400;
   border-top: ${theme.border};
-  padding-top: ${theme.space[7]};
-  padding-bottom: ${theme.space[6]};
+  padding: ${theme.space[5]} 0;
   overflow: hidden;
   position: relative;
   width: 100%;
+
+  @media ${theme.mq.tablet} {
+    padding: ${theme.space[6]} 0;
+  }
 
   .decorator {
     opacity: 0.75;
@@ -87,6 +90,7 @@ export const Footer = styled.footer`
 
       .legal {
         display: flex;
+        align-items: center;
         flex: 2;
         justify-content: space-between;
       }

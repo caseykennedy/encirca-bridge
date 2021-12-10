@@ -12,12 +12,14 @@ import * as S from './styles.scss'
 
 // Sections
 import Hero from './Hero'
+import Welcome from './Welcome'
 
 // ___________________________________________________________________
 
 const HomePage = () => (
   <S.HomePage>
     <Hero />
+    <Welcome />
   </S.HomePage>
 )
 

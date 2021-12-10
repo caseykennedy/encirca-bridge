@@ -44,6 +44,11 @@ type ThemeShape = {
       [key: string]: any
     }
   }
+  text: {
+    default: {
+      [key: string]: any
+    }
+  }
   strokeWidth: string
   maxWidth: string
   siteWidth: string
@@ -126,7 +131,7 @@ const theme: ThemeShape = {
     mobile: 4,
     tablet: 5,
     desktop: 5,
-    vertical: [6, 7],
+    vertical: [5, 6],
     axis: [5, 6],
   },
 
@@ -199,16 +204,22 @@ const theme: ThemeShape = {
   // Base
   // ___________________________________________________________________
 
+  text: {
+    default: {
+      marginBottom: 4,
+    },
+  },
+
   border: '1px solid #26476C',
   borderRadius: '4px',
-  shadow: '0px 3px 1px rgba(0, 0, 0, 0.5)',
+  shadow: '0px 0px 7px rgba(0, 0, 0, 0.75)',
 
   maxWidth: '1200px',
   siteWidth: '100%',
   logoHeight: '32px',
   headerHeight: '80px',
   iconWidth: '18px',
-  inputHeight: '64px',
+  inputHeight: '94px',
   strokeWidth: '2px',
 
   grid: {

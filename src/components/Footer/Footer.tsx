@@ -76,7 +76,7 @@ const Footer = () => (
         <Flex className="nav">
           <Flex>
             {navLinks.map((item, idx) => (
-              <Text ml={5} key={idx}>
+              <Text ml={5} mb={0} key={idx}>
                 <Link to={item.path}>{item.name}</Link>
               </Text>
             ))}
