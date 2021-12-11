@@ -4,7 +4,7 @@
 import React, { useState } from 'react'
 
 // Theme + ui
-import { Box } from 'theme-ui'
+import { Box, Text } from 'theme-ui'
 import theme from '../../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
 
@@ -76,7 +76,16 @@ const AcquireYourTld = () => {
         </ul>
 
         <Box as="figure">
-          <Box sx={{ fontSize: 7, p: 6 }}>{currentTab?.content}</Box>
+          <Text
+            sx={{
+              fontSize: '18rem',
+              fontFamily: 'display',
+              fontWeight: 600,
+              mb: 0,
+            }}
+          >
+            {currentTab?.content}
+          </Text>
         </Box>
       </S.AcquireYourTld>
     </Section>
