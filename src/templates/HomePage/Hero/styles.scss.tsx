@@ -43,8 +43,13 @@ export const Hero = styled(Box)`
         padding: ${theme.space[5]} ${theme.space[6]};
         width: 100%;
 
+        @media ${theme.mq.tablet} {
+          flex: 0.6;
+          padding: 0;
+        }
+
         @media ${theme.mq.desktop} {
-          flex: 1.2;
+          flex: 1;
           justify-content: flex-end;
           padding: 0;
         }

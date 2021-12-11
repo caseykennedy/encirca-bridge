@@ -13,6 +13,8 @@ import * as S from './styles.scss'
 // Sections
 import Hero from './Hero'
 import Welcome from './Welcome'
+import FutureWeb from './FutureWeb'
+import AcquireYourTld from './AcquireYourTld'
 
 // ___________________________________________________________________
 
@@ -20,6 +22,8 @@ const HomePage = () => (
   <S.HomePage>
     <Hero />
     <Welcome />
+    <FutureWeb />
+    <AcquireYourTld />
   </S.HomePage>
 )
 

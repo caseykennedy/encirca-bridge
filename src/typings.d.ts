@@ -7,8 +7,8 @@ declare module '*.woff2'
 
 declare module 'react-anchor-link-smooth-scroll'
 
-function createRef<T>(): RefObject<T>
-interface RefObject<T> {
-  // immutable
-  readonly current: T | null
-}
+// function createRef<T>(): RefObject<T>
+// interface RefObject<T> {
+//   // immutable
+//   readonly current: T | null
+// }

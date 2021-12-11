@@ -20,7 +20,7 @@ const RootVariables = css`
     --space-xs: calc(0.5 * var(--space-unit));
     --space-sm: calc(0.75 * var(--space-unit));
     --space-md: calc(1 * var(--space-unit));
-    --space-lg: calc(2 * var(--space-unit));
+    --space-lg: calc(1.5 * var(--space-unit));
     --space-xl: calc(3 * var(--space-unit));
     --space-xxl: calc(4 * var(--space-unit));
 
@@ -41,7 +41,7 @@ const RootVariables = css`
     --body-letter-spacing: 0em;
 
     @media ${theme.mq.tablet} {
-      --text-base-size: 1em;
+      /* --text-base-size: 1em; */
     }
 
     @media ${theme.mq.desktop} {

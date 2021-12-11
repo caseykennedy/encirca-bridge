@@ -283,14 +283,14 @@ const Typography = css`
       margin: 0;
     }
 
-    a {
+    /* a {
       text-decoration: underline;
 
       &:hover,
       &:focus {
         text-decoration: none;
       }
-    }
+    } */
 
     strong {
     }
@@ -357,6 +357,7 @@ const Typography = css`
     } */
 
     &.text--link {
+      color: ${theme.colors.primary};
       font-weight: 400;
       transform: text-decoration ${theme.transition.global};
       text-decoration: underline;

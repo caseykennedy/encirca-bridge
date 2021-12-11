@@ -20,6 +20,7 @@ export const Main = styled.main`
   background: ${theme.colors.background};
   margin: 0 auto;
   position: relative;
+  min-height: 30vh;
   max-height: 100%;
   max-width: ${theme.siteWidth};
   width: 100%;

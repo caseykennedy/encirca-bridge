@@ -12,11 +12,25 @@ import Globe from '../../../static/globe.svg'
 
 const ClaimDomainForm = () => (
   <S.ClaimDomainForm>
-    <Label sx={{ display: 'none' }}>Enter your top-level domain</Label>
-    <Input placeholder="Enter your top-level domain" />
-    
+    <Label id="descriptionClaim" sx={{ display: 'none' }}>
+      Enter your top-level domain
+    </Label>
+    <Input
+      name="claimDomain"
+      type="text"
+      id="claimDomain"
+      placeholder="Enter your top-level domain"
+      aria-required="true"
+    />
+
     <Flex className="button-box">
-      <Button>Claim</Button>
+      <Button
+        type="button"
+        aria-label="submit"
+        aria-describedby="descriptionClaim"
+      >
+        Claim
+      </Button>
     </Flex>
 
     <Flex className="globe">
