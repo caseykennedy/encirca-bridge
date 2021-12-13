@@ -387,7 +387,11 @@ const Typography = css`
 
     li {
       font-size: ${theme.fontSizes[2]};
-      margin: 0 0 ${theme.space[4]};
+      font-family: ${theme.fonts.body};
+      font-weight: ${theme.fontWeights.light};
+      line-height: ${theme.root.font.bodyLineHeight};
+      letter-spacing: ${theme.root.font.baseLetterSpacing};
+      margin: 0 0 ${theme.space[5]};
 
       &:last-child {
         margin-bottom: 0;

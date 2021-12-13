@@ -8,13 +8,12 @@ import { Box, Flex, Text } from 'theme-ui'
 import theme from '../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
 
-// Components
-
 // Sections
 import Hero from './Hero'
 import Welcome from './Welcome'
 import FutureWeb from './FutureWeb'
 import AcquireYourTld from './AcquireYourTld'
+import YourInternet from './YourInternet'
 
 // ___________________________________________________________________
 
@@ -24,6 +23,15 @@ const HomePage = () => (
     <Welcome />
     <FutureWeb />
     <AcquireYourTld />
+    <Box
+      sx={{
+        bg: '#26476C',
+        height: '1px',
+        width: '100%',
+        my: theme.gutter.vertical,
+      }}
+    />
+    <YourInternet />
   </S.HomePage>
 )
 

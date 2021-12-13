@@ -12,7 +12,9 @@ import Section from '../../../components/Section'
 
 // SVG
 import DeviceArrayIllustration from '../../../../static/device-array.svg'
-import Globe from '../../../../static/globe.svg'
+import BridgeIcon from '../../../../static/icon-bridge.svg'
+import RubikIcon from '../../../../static/icon-rubik.svg'
+import StarIcon from '../../../../static/icon-star.svg'
 
 // ___________________________________________________________________
 
@@ -21,19 +23,19 @@ const features = [
     title: 'Own your domain',
     description:
       "Obtain your branded TLDs on the  internet's blockchain-based digital identity layer, Handshake.",
-    icon: <Globe />,
+    icon: <StarIcon />,
   },
   {
     title: 'dWeb your brand',
     description:
       'Onboard to Web 3.0, experiment with your TLD, deploy your website and content seamlessly.',
-    icon: <Globe />,
+    icon: <RubikIcon />,
   },
   {
     title: 'Grow your name',
     description:
       'Create an online community of fans, customers, suppliers and partners with decentralized apps.',
-    icon: <Globe />,
+    icon: <BridgeIcon />,
   },
 ]
 
@@ -59,7 +61,7 @@ const FutureWeb = () => (
       </Box>
     </Flex>
 
-    <Flex sx={{ flexDirection: ['column', 'row'], gap: 5, mt: [6, 7] }}>
+    <Flex sx={{ flexDirection: ['column', 'row'], gap: 5, mt: [6, 8] }}>
       {features.map((feature, idx) => (
         <Box
           sx={{

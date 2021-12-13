@@ -22,6 +22,9 @@ export const AcquireYourTld = styled(Flex)`
     padding: 0;
 
     li {
+      flex: 1;
+      display: flex;
+      align-items: center;
       border: ${theme.border};
       border-radius: ${theme.borderRadius};
       cursor: pointer;
@@ -29,9 +32,39 @@ export const AcquireYourTld = styled(Flex)`
       padding: ${theme.space[5]};
       transition: ${theme.transition.global};
 
-      &:hover {
-        border-color: ${theme.colors.primary};
-        /* background: ${darken(0.25, theme.colors.primary)}; */
+      .step {
+        margin-right: ${theme.space[4]};
+
+        div {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: ${theme.space[2]};
+          height: 54px;
+          width: 54px;
+
+          border: ${theme.border};
+          border-width: 2px;
+          border-radius: 999px;
+          font-size: ${theme.fontSizes[2]};
+          font-weight: 400;
+          text-transform: capitalize;
+        }
+      }
+
+      &:hover,
+      &.active {
+        /* border-color: ${theme.colors.primary}; */
+        background: ${darken(0.1, theme.colors.secondary)};
+
+        .step {
+          margin-right: ${theme.space[4]};
+
+          div {
+            border-color: ${theme.colors.primary};
+            color: ${theme.colors.primary};
+          }
+        }
       }
     }
   }

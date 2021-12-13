@@ -17,6 +17,7 @@ type ThemeShape = {
   useLocalStorage?: boolean
   colors: {
     text: string
+    textMuted: string
     background: string
     black: string
     white: string
@@ -48,6 +49,14 @@ type ThemeShape = {
     default: {
       [key: string]: any
     }
+    lead: {
+      [key: string]: any
+    }
+  }
+  heading: {
+    default: {
+      [key: string]: any
+    }
   }
   strokeWidth: string
   maxWidth: string
@@ -69,6 +78,7 @@ type ThemeShape = {
   }
   border: string
   borderRadius: string
+  borderRadiusLarge: string
   shadow: string
   root: {
     mouseX: string
@@ -95,7 +105,8 @@ const theme: ThemeShape = {
   // ___________________________________________________________________
 
   colors: {
-    text: '#EEEEEE',
+    text: '#EDF3FF',
+    textMuted: '#B5BBC6',
     background: '#000B18',
 
     black: '#000000',
@@ -103,7 +114,7 @@ const theme: ThemeShape = {
     gray: '#999999',
 
     primary: '#0F95A7',
-    secondary: '#26476C',
+    secondary: '#003D59',
     accent: '#C8DCE1',
   },
 
@@ -131,7 +142,7 @@ const theme: ThemeShape = {
     mobile: 4,
     tablet: 5,
     desktop: 5,
-    vertical: [5, 6],
+    vertical: [6, 7],
     axis: [5, 6],
   },
 
@@ -208,10 +219,17 @@ const theme: ThemeShape = {
     default: {
       marginBottom: 4,
     },
+    lead: {
+      fontSize: [4, 5],
+      color: 'textMuted',
+      fontWeight: '400',
+      lineHeight: 1.25,
+    },
   },
 
   border: '1px solid #26476C',
   borderRadius: '4px',
+  borderRadiusLarge: '55px',
   shadow: '0px 0px 7px rgba(0, 0, 0, 0.75)',
 
   maxWidth: '1200px',
@@ -223,7 +241,7 @@ const theme: ThemeShape = {
   strokeWidth: '2px',
 
   grid: {
-    gap: 2,
+    gap: [4, 5],
   },
 
   transition: {

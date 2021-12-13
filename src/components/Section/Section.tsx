@@ -10,7 +10,7 @@ import theme from '../../gatsby-plugin-theme-ui'
 type Props = {
   bg?: string
   border?: boolean
-  children: React.ReactNode
+  children?: React.ReactNode
   className?: string
   color?: string
   maxWidth?: number | number[] | string | string[]
