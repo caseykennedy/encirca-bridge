@@ -41,7 +41,9 @@ const features = [
 
 const FutureWeb = () => (
   <Section pt={0}>
-    <Flex sx={{ flexDirection: ['column', 'row'], alignItems: 'center', gap: 6 }}>
+    <Flex
+      sx={{ flexDirection: ['column', 'row'], alignItems: 'center', gap: 6 }}
+    >
       <Box sx={{ flex: 1 }}>
         <Box mr={[4, 6, 8]}>
           <h2>Step firmly into the future of the web.</h2>
@@ -61,7 +63,13 @@ const FutureWeb = () => (
       </Box>
     </Flex>
 
-    <Flex sx={{ flexDirection: ['column', 'row'], gap: 5, mt: [6, 7] }}>
+    <Flex
+      sx={{
+        flexDirection: ['column', 'row'],
+        gap: 5,
+        mt: theme.gutter.vertical,
+      }}
+    >
       {features.map((feature, idx) => (
         <Box
           sx={{
@@ -70,9 +78,9 @@ const FutureWeb = () => (
             flex: 1,
             padding: [4, 5],
             transition: theme.transition.global,
-            "&:hover": {
-              background: theme.colors.secondary
-            }
+            '&:hover': {
+              background: theme.colors.secondary,
+            },
           }}
           key={idx}
         >

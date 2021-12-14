@@ -1,6 +1,7 @@
 // Hero Styles:
 // ___________________________________________________________________
 
+import {lighten} from 'polished'
 import styled from 'styled-components'
 import { Box } from 'theme-ui'
 import theme from '../../../gatsby-plugin-theme-ui'
@@ -8,6 +9,7 @@ import theme from '../../../gatsby-plugin-theme-ui'
 // ___________________________________________________________________
 
 export const Hero = styled(Box)`
+  /* background: ${lighten(0.05, theme.colors.background)}; */
   width: 100%;
 
   .hero {
@@ -25,7 +27,7 @@ export const Hero = styled(Box)`
 
       @media ${theme.mq.tablet} {
         gap: ${theme.space[6]};
-        padding: ${theme.space[5]} ${theme.space[6]} 0;
+        padding: ${theme.space[4]} 0 ${theme.space[6]};
       }
 
       @media ${theme.mq.desktop} {

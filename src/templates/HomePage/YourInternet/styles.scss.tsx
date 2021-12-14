@@ -53,7 +53,7 @@ export const LearnMore = styled.div`
   width: 100%;
 
   @media ${theme.mq.tablet} {
-    margin-top: ${theme.space[7]};
+    margin-top: ${theme.space[8]};
   }
 
   .swiper-slide {
@@ -82,10 +82,10 @@ export const LearnMore = styled.div`
       align-items: center;
       justify-content: center;
       flex: 1;
-      padding: ${theme.space[6]};
+      padding: ${theme.space[8]} ${theme.space[6]};
 
       svg {
-        max-width: 250px;
+        max-height: 230px;
       }
     }
 

@@ -28,7 +28,7 @@ const HomePage = () => (
         bg: '#26476C',
         height: '1px',
         width: '100%',
-        my: [5, 6],
+        my: [4, 5],
       }}
     />
     <YourInternet />

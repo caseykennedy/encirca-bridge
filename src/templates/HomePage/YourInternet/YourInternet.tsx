@@ -97,7 +97,7 @@ const YourInternet = () => (
       </Box>
 
       <Box sx={{ flex: 1 }}>
-        <Text as="p" variant="lead" mt={9} mb={5}>
+        <Text as="p" variant="lead" mt={[0, 9]} mb={5}>
           Handshake replaces the web’s root zone with an open-source protocol
           which manages the registration, renewal and transfer of DNS top-level
           domains (TLDs) with the blockchain: crytpo-decentralizing and
@@ -109,33 +109,6 @@ const YourInternet = () => (
         </Text>
       </Box>
     </Flex>
-
-    {/* <Box>
-      <Heading as="h2" mb={5}>
-        Your name, your internet.
-        <br />
-        Bridge brings you in.
-      </Heading>
-    </Box>
-
-    <Flex sx={{ flexDirection: ['column', 'row'], gap: 6 }}>
-      <Box sx={{ flex: 1 }}>
-        <BridgeGridArt />
-      </Box>
-
-      <Box sx={{ flex: 1 }}>
-        <Text as="p" variant="lead" mb={5}>
-          Handshake replaces the web’s root zone with an open-source protocol
-          which manages the registration, renewal and transfer of DNS top-level
-          domains (TLDs) with the blockchain: crytpo-decentralizing and
-          upgrading the world wide web.
-        </Text>
-        <Text as="p" variant="lead">
-          Bridge acquires your brand name or ICANN TLD on Handshake, seamlessly
-          and worry-free.
-        </Text>
-      </Box>
-    </Flex> */}
 
     <S.HandshakeFeatures>
       <div className="handshake">
@@ -171,7 +144,7 @@ const YourInternet = () => (
       <Box>
         <Swiper
           slidesPerView="auto"
-          spaceBetween={50}
+          spaceBetween={33}
           pagination={{
             clickable: true,
           }}

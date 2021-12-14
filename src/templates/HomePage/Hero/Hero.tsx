@@ -47,7 +47,7 @@ const Hero = () => (
       </Flex>
     </S.Hero>
 
-    <Section>
+    <Section pt={0} pb={6}>
       <ClaimDomainForm />
     </Section>
   </>

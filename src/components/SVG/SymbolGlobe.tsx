@@ -10,15 +10,15 @@ type Props = { fill?: string }
 const SVG = styled(motion.svg)<{ fill?: string }>``
 
 const animation = {
-  transition: {
-    duration: 1.25,
-    ease: 'easeOut',
-  },
   initial: {
     pathLength: 0,
   },
   animate: {
     pathLength: 1,
+  },
+  transition: {
+    duration: 1.25,
+    ease: 'easeOut',
   },
 }
 

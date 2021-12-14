@@ -54,11 +54,6 @@ type ThemeShape = {
       [key: string]: any
     }
   }
-  heading: {
-    default: {
-      [key: string]: any
-    }
-  }
   strokeWidth: string
   maxWidth: string
   siteWidth: string
