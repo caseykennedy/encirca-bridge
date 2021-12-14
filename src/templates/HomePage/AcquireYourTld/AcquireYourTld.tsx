@@ -47,7 +47,7 @@ const data = [
 ]
 
 const AcquireYourTld = () => {
-  const [activeTab, setActiveTab] = useState(1)
+  const [activeTab, setActiveTab] = useState(0)
   const [currentTab, setCurrentTab] = useState(data[0])
 
   const handleTabOver = useCallback(async (currentTab: number) => {
@@ -59,7 +59,7 @@ const AcquireYourTld = () => {
   }, [])
 
   return (
-    <Section>
+    <Section pt={0}>
       <Heading as="h4" mb={5}>
         How to acquire your TLD:
       </Heading>

@@ -25,6 +25,7 @@ type ThemeShape = {
     primary: string
     secondary: string
     accent: string
+    highlight: string
   }
   space: string[]
   gutter: {
@@ -116,6 +117,7 @@ const theme: ThemeShape = {
     primary: '#0F95A7',
     secondary: '#003D59',
     accent: '#C8DCE1',
+    highlight: '#26476C',
   },
 
   // Space
@@ -220,7 +222,7 @@ const theme: ThemeShape = {
       marginBottom: 4,
     },
     lead: {
-      fontSize: [4, 5],
+      fontSize: [4, 4, 5],
       color: 'textMuted',
       fontWeight: '400',
       lineHeight: 1.25,

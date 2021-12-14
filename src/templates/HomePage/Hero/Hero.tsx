@@ -13,7 +13,7 @@ import Section from '../../../components/Section'
 import ClaimDomainForm from '../../../components/ClaimDomainForm'
 
 // SVG
-import SymbolGlobe from '../../../../static/hero-symbol-globe.svg'
+import SymbolGlobe from '../../../components/SVG/SymbolGlobe'
 
 // ___________________________________________________________________
 
@@ -31,7 +31,7 @@ const Hero = () => (
             name/
           </h1>
 
-          <Text as="p" pr={[0]}>
+          <Text as="p" pr={[0, 5, 7]}>
             Acquire your Web 3.0 top-level domain (TLD) extension with ease and
             assurance.
           </Text>

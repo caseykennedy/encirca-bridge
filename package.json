@@ -72,7 +72,7 @@
     "react-typist": "^2.0.5",
     "styled-components": "^5.2.1",
     "styled-normalize": "^8.0.7",
-    "swiper": "^6.8.1",
+    "swiper": "^7.3.2",
     "theme-ui": "^0.7.5"
   },
   "devDependencies": {

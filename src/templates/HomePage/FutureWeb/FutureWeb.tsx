@@ -40,8 +40,8 @@ const features = [
 ]
 
 const FutureWeb = () => (
-  <Section>
-    <Flex sx={{ flexDirection: ['column', 'row'], gap: 6 }}>
+  <Section pt={0}>
+    <Flex sx={{ flexDirection: ['column', 'row'], alignItems: 'center', gap: 6 }}>
       <Box sx={{ flex: 1 }}>
         <Box mr={[4, 6, 8]}>
           <h2>Step firmly into the future of the web.</h2>
@@ -61,7 +61,7 @@ const FutureWeb = () => (
       </Box>
     </Flex>
 
-    <Flex sx={{ flexDirection: ['column', 'row'], gap: 5, mt: [6, 8] }}>
+    <Flex sx={{ flexDirection: ['column', 'row'], gap: 5, mt: [6, 7] }}>
       {features.map((feature, idx) => (
         <Box
           sx={{
