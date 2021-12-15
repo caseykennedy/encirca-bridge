@@ -20,8 +20,8 @@ const RootVariables = css`
     --space-xs: calc(0.5 * var(--space-unit));
     --space-sm: calc(0.75 * var(--space-unit));
     --space-md: calc(1 * var(--space-unit));
-    --space-lg: calc(1.5 * var(--space-unit));
-    --space-xl: calc(3 * var(--space-unit));
+    --space-lg: calc(1.75 * var(--space-unit));
+    --space-xl: calc(2.5 * var(--space-unit));
     --space-xxl: calc(4 * var(--space-unit));
 
     /* -------------------------------- 

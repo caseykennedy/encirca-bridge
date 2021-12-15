@@ -10,7 +10,7 @@ type Props = { fill?: string }
 const SVG = styled(motion.svg)<{ fill?: string }>`
   .hns-1 {
     fill-rule: evenodd;
-    fill: ${(p) => (p.fill ? p.fill : theme.colors.black)};
+    fill: ${(p) => (p.fill ? p.fill : theme.colors.text)};
   }
 `
 

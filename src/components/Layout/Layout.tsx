@@ -22,7 +22,7 @@ export type LayoutProps = {
 
 const Layout = ({ children }: LayoutProps) => {
   console.log(
-    `%c bridge | crafted with care | caseykennedy.hns.to `,
+    `%c bridge | crafted with care | tetra/ | tetrashapes.com `,
     `background: #78FFF2; color: #000000`
   )
   return (

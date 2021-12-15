@@ -19,7 +19,14 @@ import CentralizedDNS from '../../../../static/centralized-dns.svg'
 
 const Welcome = () => (
   <Section>
-    <Flex sx={{ alignItems: 'center', justifyContent: 'space-between', mb: 5 }}>
+    <Flex
+      sx={{
+        alignItems: ['flex-start', 'center'],
+        flexDirection: ['column', 'row'],
+        justifyContent: 'space-between',
+        mb: 5,
+      }}
+    >
       <Box>
         <h2>
           Welcome to the

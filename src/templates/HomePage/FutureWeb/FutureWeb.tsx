@@ -40,9 +40,9 @@ const features = [
 ]
 
 const FutureWeb = () => (
-  <Section pt={0}>
+  <Section>
     <Flex
-      sx={{ flexDirection: ['column', 'row'], alignItems: 'center', gap: 6 }}
+      sx={{ flexDirection: ['column', 'row'], gap: 6 }}
     >
       <Box sx={{ flex: 1 }}>
         <Box mr={[4, 6, 8]}>

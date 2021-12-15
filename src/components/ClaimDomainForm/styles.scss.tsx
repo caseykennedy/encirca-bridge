@@ -41,7 +41,7 @@ export const ClaimDomainForm = styled.form`
     align-items: center;
     justify-content: center;
 
-    padding-right: ${theme.space[3]};
+    padding-right: ${theme.space[2]};
     position: absolute;
     top: 0;
     right: 0;

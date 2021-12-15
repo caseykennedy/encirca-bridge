@@ -15,6 +15,7 @@ const ClaimDomainForm = () => (
     <Label id="descriptionClaim" sx={{ display: 'none' }}>
       Enter your top-level domain
     </Label>
+    
     <Input
       name="claimDomain"
       type="text"
@@ -23,7 +24,7 @@ const ClaimDomainForm = () => (
       aria-required="true"
     />
 
-    <Flex className="button-box">
+    <div className="button-box">
       <Button
         type="button"
         aria-label="submit"
@@ -31,11 +32,11 @@ const ClaimDomainForm = () => (
       >
         Claim
       </Button>
-    </Flex>
+    </div>
 
-    <Flex className="globe">
+    <div className="globe">
       <Globe />
-    </Flex>
+    </div>
   </S.ClaimDomainForm>
 )
 

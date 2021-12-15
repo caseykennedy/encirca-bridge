@@ -112,7 +112,7 @@ const theme: ThemeShape = {
     primary: '#0F95A7',
     secondary: '#003D59',
     accent: '#C8DCE1',
-    highlight: '#26476C',
+    highlight: '#001830',
   },
 
   // Space
@@ -178,17 +178,27 @@ const theme: ThemeShape = {
 
   buttons: {
     primary: {
+      fontWeight: 500,
       bg: 'primary',
       borderRadius: '4px',
       color: 'white',
       cursor: 'pointer',
       display: 'flex',
       alignItems: 'center',
-      lineHeight: '1',
+      lineHeight: '1.5',
       py: 2,
       px: 4,
       '&:hover': {
         bg: darken(0.15, '#0F95A7'),
+      },
+      span: {
+        ml: 5,
+        svg: {
+          fill: 'white',
+          '&:hover': {
+            fill: 'white',
+          },
+        },
       },
     },
     outline: {

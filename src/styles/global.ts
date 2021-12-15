@@ -18,29 +18,10 @@ const GlobalStyles = createGlobalStyle`
   ${Reset}
   ${Typography}
   ${Widgets}
-
-  ::-webkit-scrollbar {
-    /* width: ${theme.space[4]}; */
-  }
-
-  /* Track */
-  ::-webkit-scrollbar-track {
-    /* background: ${theme.colors.black}; */
-  }
-
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    /* background: ${theme.colors.background};
-    border-left: ${theme.border};
-    border-color: ${theme.colors.black}; */
-  }
-
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-  }
   
   html,
   body {
+    background: ${theme.colors.background};
     border: 0;
     margin: 0;
     padding: 0;

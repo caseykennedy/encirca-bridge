@@ -57,11 +57,7 @@ export const LearnMore = styled.div`
   }
 
   .swiper-slide {
-    width: 85%;
-
-    @media ${theme.mq.tablet} {
-      width: 95%;
-    }
+    width: 95%;
 
     @media ${theme.mq.desktop} {
       width: 85%;
@@ -77,31 +73,56 @@ export const LearnMore = styled.div`
       flex-direction: row;
     }
 
-    .figure {
+    &__figure {
+      cursor: grab;
       display: flex;
       align-items: center;
       justify-content: center;
       flex: 1;
-      padding: ${theme.space[8]} ${theme.space[6]};
+      padding: ${theme.space[5]};
+
+      @media ${theme.mq.tablet} {
+        padding: ${theme.space[8]} ${theme.space[6]};
+      }
 
       svg {
-        max-height: 230px;
+        max-height: 200px;
+
+        @media ${theme.mq.tablet} {
+          max-height: 230px;
+        }
       }
     }
 
-    .highlight {
+    &__highlight {
       flex: 1;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: ${theme.space[6]};
+      padding: ${theme.space[5]};
 
-      background: ${lighten(0.05, theme.colors.background)};
+      background: ${theme.colors.highlight};
       border-top: ${theme.border};
+      transition: background-color ${theme.transition.global};
 
       @media ${theme.mq.tablet} {
         border-top: none;
         border-left: ${theme.border};
+        padding: ${theme.space[6]};
+      }
+
+      &:hover {
+        background: ${lighten(0.025, theme.colors.highlight)};
+      }
+    }
+
+    &__link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      svg {
+        width: ${theme.space[3]};
       }
     }
   }
@@ -114,10 +135,10 @@ export const LearnMore = styled.div`
   .swiper-pagination-bullets.swiper-pagination-horizontal,
   .swiper-pagination-custom,
   .swiper-pagination-fraction {
-    bottom: calc(${theme.space[5]} * -0.5);
+    bottom: calc(${theme.space[5]} * -1);
 
     @media ${theme.mq.tablet} {
-      bottom: calc(${theme.space[5]} * -1.5);
+      bottom: calc(${theme.space[5]} * -1.25);
     }
   }
 
@@ -126,7 +147,7 @@ export const LearnMore = styled.div`
   }
 
   .swiper-pagination-bullet {
-    background: ${theme.colors.highlight};
+    background: ${lighten(0.05, theme.colors.highlight)};
     opacity: 1;
     border-radius: 0;
     height: 3px;

@@ -16,6 +16,7 @@ import 'swiper/css/pagination'
 // Components
 import Section from '../../../components/Section'
 import HandshakeLogo from '../../../components/SVG/Handshake'
+import Icon from '../../../components/Icons'
 
 // SVG
 import StarIcon from '../../../../static/globe.svg'
@@ -72,15 +73,15 @@ const features = [
 
 const hnsLinks = [
   {
-    title: 'Learn more about Handshake.',
+    title: 'Learn more about<br />Handshake.',
     description: 'What is Handshake?',
-    url: '',
+    url: 'https://handshake.org/',
     figure: <HnsCloud />,
   },
   {
-    title: 'Now showing in a browser near you.',
-    description: 'Support Handshake',
-    url: '',
+    title: 'Compatible with the<br />existing Internet.',
+    description: 'Setup HDNS now, it takes seconds.',
+    url: 'https://www.hdns.io/',
     figure: <HnsBridge />,
   },
 ]
@@ -144,7 +145,7 @@ const YourInternet = () => (
       <Box>
         <Swiper
           slidesPerView="auto"
-          spaceBetween={33}
+          spaceBetween={25}
           pagination={{
             clickable: true,
           }}
@@ -152,13 +153,23 @@ const YourInternet = () => (
           {hnsLinks.map((item, idx) => (
             <SwiperSlide>
               <Flex className="slide" key={idx}>
-                <Flex className="figure">{item.figure}</Flex>
-                <Flex className="highlight">
-                  <Heading as="h4" mb={6}>
-                    {item.title}
-                  </Heading>
-                  <p>{item.description}</p>
-                </Flex>
+                <Flex className="slide__figure">{item.figure}</Flex>
+                <a
+                  href={item.url}
+                  target="_blank"
+                  rel="nofollow noreferrer"
+                  className="slide__highlight"
+                >
+                  <Heading
+                    as="h4"
+                    mb={6}
+                    dangerouslySetInnerHTML={{ __html: item.title }}
+                  />
+                  <div className="slide__link">
+                    <Text sx={{ fontSize: 2, mb: 0}}>{item.description}</Text>
+                    <Icon name="chevron" color="white" />
+                  </div>
+                </a>
               </Flex>
             </SwiperSlide>
           ))}
