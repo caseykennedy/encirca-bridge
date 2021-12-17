@@ -41,7 +41,7 @@ const Hero = () => (
             name/
           </h1>
 
-          <Text as="p" pr={[0, 5, 7]}>
+          <Text as="p" pr={[0, 6, 7]}>
             Acquire your Web 3.0 top-level domain (TLD) extension with ease and
             assurance.
           </Text>

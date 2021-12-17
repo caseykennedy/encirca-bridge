@@ -117,9 +117,7 @@ const SecureWeb = () => (
     >
       <div>
         <Heading as="h2">
-          For a web that is reliable,
-          <br />
-          private and secure.
+          For a web that is reliable, private and secure.
         </Heading>
       </div>
       <div>
@@ -137,7 +135,7 @@ const SecureWeb = () => (
         </Heading>
       </Box>
 
-      <Grid columns={[1, 2, 3]} gap={[6, 7]} mt={[6, 7]}>
+      <Grid columns={[1, 2, 3]} gap={[5, 5, 7]} mt={[6, 7]}>
         {features.map((feature, idx) => (
           <Box key={idx}>
             <Flex

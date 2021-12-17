@@ -42,10 +42,15 @@ const features = [
 const FutureWeb = () => (
   <Section>
     <Flex
-      sx={{ flexDirection: ['column', 'row'], gap: 6, pb: theme.gutter.vertical }}
+      sx={{
+        flexDirection: ['column', 'row'],
+        alignItems: 'center',
+        gap: [5, 5, 6],
+        pb: theme.gutter.vertical,
+      }}
     >
       <Box sx={{ flex: 1 }}>
-        <Box mr={[4, 6, 8]}>
+        <Box mr={[4, 6, 7]}>
           <h2>Step firmly into the future of the web.</h2>
           <p>
             Bridge by <strong>EnCirca&trade;</strong> provides Handshake DNS
@@ -65,8 +70,8 @@ const FutureWeb = () => (
 
     <Flex
       sx={{
-        flexDirection: ['column', 'row'],
-        gap: 5,
+        flexDirection: ['column', 'column', 'row'],
+        gap: [5, 5, 6],
         pt: theme.gutter.vertical,
       }}
     >
