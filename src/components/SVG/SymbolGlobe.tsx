@@ -17,7 +17,7 @@ const animation = {
     pathLength: 1,
   },
   transition: {
-    duration: 1.25,
+    duration: 3,
     ease: 'easeOut',
   },
 }

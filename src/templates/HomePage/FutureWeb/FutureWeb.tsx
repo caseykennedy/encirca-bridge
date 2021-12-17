@@ -42,7 +42,7 @@ const features = [
 const FutureWeb = () => (
   <Section>
     <Flex
-      sx={{ flexDirection: ['column', 'row'], gap: 6 }}
+      sx={{ flexDirection: ['column', 'row'], gap: 6, pb: theme.gutter.vertical }}
     >
       <Box sx={{ flex: 1 }}>
         <Box mr={[4, 6, 8]}>
@@ -67,7 +67,7 @@ const FutureWeb = () => (
       sx={{
         flexDirection: ['column', 'row'],
         gap: 5,
-        mt: theme.gutter.vertical,
+        pt: theme.gutter.vertical,
       }}
     >
       {features.map((feature, idx) => (

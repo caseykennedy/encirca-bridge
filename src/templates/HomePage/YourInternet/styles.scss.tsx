@@ -15,14 +15,14 @@ const HandshakeRadius = '125px'
 export const HandshakeFeatures = styled.div`
   background: ${theme.colors.secondary};
   border-radius: calc(${theme.borderRadiusLarge} / 2);
-  margin-top: ${theme.space[6]};
+  margin-top: ${theme.space[6]} 0;
   padding: ${theme.space[6]};
   position: relative;
   width: 100%;
 
   @media ${theme.mq.tablet} {
     border-radius: ${theme.borderRadiusLarge};
-    margin-top: ${theme.space[8]};
+    margin: ${theme.space[7]} 0;
     padding: ${theme.space[7]};
   }
 
@@ -49,11 +49,11 @@ export const HandshakeFeatures = styled.div`
 `
 
 export const LearnMore = styled.div`
-  margin-top: ${theme.space[6]};
+  padding-top: ${theme.space[6]};
   width: 100%;
 
   @media ${theme.mq.tablet} {
-    margin-top: ${theme.space[8]};
+    padding-top: ${theme.space[7]};
   }
 
   .swiper-slide {

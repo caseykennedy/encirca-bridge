@@ -14,46 +14,96 @@ import HandshakeBadge from '../../../components/HandshakeBadge'
 import Icon from '../../../components/Icons'
 
 // SVG
-import CentralizedDNS from '../../../../static/centralized-dns.svg'
+import IconLayerStack from '../../../../static/icon-layer-stack.svg'
+import IconClipboard from '../../../../static/icon-clipboard.svg'
+import IconCubes from '../../../../static/icon-cubes.svg'
 
 // ___________________________________________________________________
 
 const features = [
   {
-    title: 'Plug & play',
+    title: 'Open',
     description:
-      'Existing 1,500 ICANN TLDs are reserved for backwards compatibility.',
-    icon: <Icon name="chevron" color="white" />,
+      'Durably decentralized, open-source root zone making the web public access commons, open for all.',
   },
   {
-    title: 'No squatting',
+    title: 'Trustless',
     description:
-      'The top 100,000 Alexa website domains are reseerved for claiming by owners.',
-    icon: <Icon name="chevron" color="white" />,
+      'Uncensorable, permissionless protocols secured by the network with no middle parties.',
   },
   {
-    title: 'Fair auctions',
+    title: 'Secure',
     description:
-      'TLDs are acquired by highest bidder via vickrey auction, $HNS burned is paid to no one.',
-    icon: <Icon name="chevron" color="white" />,
+      'Sybil attack-resistant, cryptographically authenticated identity and resources.',
   },
   {
-    title: 'Unrestricted',
+    title: 'Non-fungible',
     description:
-      'Decentralized authority—no one central governance makes decisions for the network. ',
-    icon: <Icon name="chevron" color="white" />,
+      'Tokenized, proof-of-work ownership & certification for total control over your data.',
   },
   {
-    title: 'Active marketplace',
-    description: 'Direct-buy global aftermarket.',
-    icon: <Icon name="chevron" color="white" />,
+    title: 'Expandable',
+    description:
+      'The existing web, blockchain soft-forked into permissionless and endless utility.',
   },
   {
-    title: 'To the moon',
-    description: 'Over 2 million TLDs registered and counting.',
-    icon: <Icon name="chevron" color="white" />,
+    title: 'Limitless',
+    description:
+      'Virtually unlimited app, service and sub-level domain (SLD) naming possibilities.',
   },
 ]
+
+const timelineData = [
+  {
+    id: 0,
+    decade: '1990s',
+    version: '1.0',
+    function: 'read',
+  },
+  {
+    id: 1,
+    decade: '2000s',
+    version: '2.0',
+    function: 'read + write',
+  },
+  {
+    id: 2,
+    decade: '2020s',
+    version: '3.0',
+    function: 'read + write + verify',
+    highlight: true,
+  },
+]
+
+const Timeline = () => (
+  <S.Timeline>
+    {timelineData.map((item, idx) => (
+      <div className="timeblock" key={idx}>
+        <div className={`${item.highlight ? 'timeblock--highlight' : ''}`}>
+          <div>{item.decade}</div>
+          <div className="icon">
+            {item.id === 0 && <IconClipboard />}
+            {item.id === 1 && (
+              <>
+                <IconClipboard />
+                <IconLayerStack />
+              </>
+            )}
+            {item.id === 2 && (
+              <>
+                <IconClipboard />
+                <IconLayerStack />
+                <IconCubes />
+              </>
+            )}
+          </div>
+          <div className="version">web {item.version}</div>
+          <div>{item.function}</div>
+        </div>
+      </div>
+    ))}
+  </S.Timeline>
+)
 
 const SecureWeb = () => (
   <Section>
@@ -77,7 +127,7 @@ const SecureWeb = () => (
       </div>
     </Flex>
 
-    <S.Timeline>Timeline</S.Timeline>
+    <Timeline />
 
     <S.Features>
       <Box>
@@ -100,17 +150,16 @@ const SecureWeb = () => (
                 sx={{
                   bg: 'secondary',
                   borderRadius: theme.borderRadius,
-                  py: 2,
-                  px: 3,
+                  p: 3,
                 }}
               >
-                {feature.icon}
+                <Icon name="checkmark" color="white" />
               </Flex>
               <Heading as="h4" ml={4}>
                 {feature.title}
               </Heading>
             </Flex>
-            <Text>{feature.description}</Text>
+            <Text as="p">{feature.description}</Text>
           </Box>
         ))}
       </Grid>

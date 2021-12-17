@@ -88,7 +88,7 @@ type ThemeShape = {
   }
 }
 
-const breakpoints: string[] = ['840px', '1024px']
+const breakpoints: string[] = ['768px', '1024px']
 
 const theme: ThemeShape = {
   breakpoints,
@@ -110,7 +110,7 @@ const theme: ThemeShape = {
     gray: '#999999',
 
     primary: '#0F95A7',
-    secondary: '#003D59',
+    secondary: '#025373',
     accent: '#C8DCE1',
     highlight: '#001830',
   },
@@ -180,6 +180,8 @@ const theme: ThemeShape = {
     primary: {
       fontWeight: 500,
       bg: 'primary',
+      border: '1px solid',
+      borderColor: 'primary',
       borderRadius: '4px',
       color: 'white',
       cursor: 'pointer',
@@ -252,8 +254,8 @@ const theme: ThemeShape = {
   },
 
   transition: {
-    all: 'all 0.11s ease-in-out 0s',
-    global: '0.11s ease-in-out 0s',
+    all: 'all 0.22s ease-in-out 0s',
+    global: '0.22s ease-in-out 0s',
   },
 
   transform: {

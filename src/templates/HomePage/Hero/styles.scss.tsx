@@ -27,7 +27,7 @@ export const Hero = styled(Box)`
 
       @media ${theme.mq.tablet} {
         gap: ${theme.space[6]};
-        padding: ${theme.space[4]} 0 ${theme.space[6]};
+        padding: ${theme.space[4]} ${theme.space[6]} ${theme.space[6]};
       }
 
       @media ${theme.mq.desktop} {

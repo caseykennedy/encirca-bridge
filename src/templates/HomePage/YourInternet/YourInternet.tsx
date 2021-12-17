@@ -88,7 +88,13 @@ const hnsLinks = [
 
 const YourInternet = () => (
   <Section overflow="hidden">
-    <Flex sx={{ flexDirection: ['column', 'row'], gap: 6 }}>
+    <Flex
+      sx={{
+        flexDirection: ['column', 'row'],
+        gap: 6,
+        pb: theme.gutter.vertical,
+      }}
+    >
       <Box sx={{ flex: 1 }}>
         <Heading as="h2" mb={5}>
           Your name, your internet. Bridge brings you in.
@@ -98,7 +104,7 @@ const YourInternet = () => (
       </Box>
 
       <Box sx={{ flex: 1 }}>
-        <Text as="p" variant="lead" mt={[0, 9]} mb={5}>
+        <Text as="p" variant="lead" mb={5}>
           Handshake replaces the web’s root zone with an open-source protocol
           which manages the registration, renewal and transfer of DNS top-level
           domains (TLDs) with the blockchain: crytpo-decentralizing and
@@ -151,8 +157,8 @@ const YourInternet = () => (
           }}
         >
           {hnsLinks.map((item, idx) => (
-            <SwiperSlide>
-              <Flex className="slide" key={idx}>
+            <SwiperSlide key={idx}>
+              <Flex className="slide">
                 <Flex className="slide__figure">{item.figure}</Flex>
                 <a
                   href={item.url}
@@ -166,7 +172,7 @@ const YourInternet = () => (
                     dangerouslySetInnerHTML={{ __html: item.title }}
                   />
                   <div className="slide__link">
-                    <Text sx={{ fontSize: 2, mb: 0}}>{item.description}</Text>
+                    <Text sx={{ fontSize: 2, mb: 0 }}>{item.description}</Text>
                     <Icon name="chevron" color="white" />
                   </div>
                 </a>

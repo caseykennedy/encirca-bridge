@@ -9,11 +9,13 @@ import theme from '../../gatsby-plugin-theme-ui'
 
 export const Footer = styled.footer`
   font-weight: 400;
-  border-top: ${theme.border};
+  /* border-bottom: ${theme.border}; */
   padding: ${theme.space[5]} 0;
   overflow: hidden;
-  position: relative;
+  position: sticky;
+  bottom: 0;
   width: 100%;
+  z-index: 0;
 
   @media ${theme.mq.tablet} {
     padding: ${theme.space[6]} 0;

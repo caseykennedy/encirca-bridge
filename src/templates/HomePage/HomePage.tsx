@@ -34,7 +34,6 @@ const HomePage = () => (
   <S.HomePage>
     <Hero />
     <Welcome />
-    <Divider />
     <FutureWeb />
     <AcquireYourTld />
     <Divider />

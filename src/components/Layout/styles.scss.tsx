@@ -18,10 +18,12 @@ export const Wrapper = styled.div`
 
 export const Main = styled.main`
   background: ${theme.colors.background};
+  border-bottom: ${theme.border};
   margin: 0 auto;
   position: relative;
   min-height: 30vh;
   max-height: 100%;
   max-width: ${theme.siteWidth};
   width: 100%;
+  z-index: 1;
 `

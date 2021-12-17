@@ -40,14 +40,6 @@ const RootVariables = css`
     --heading-letter-spacing: 0em;
     --body-letter-spacing: 0em;
 
-    @media ${theme.mq.tablet} {
-      /* --text-base-size: 1em; */
-    }
-
-    @media ${theme.mq.desktop} {
-      --text-base-size: 1.1em;
-    }
-
     /* type scale */
     --text-xs: calc(1em / (var(--text-scale-ratio) * var(--text-scale-ratio)));
     --text-sm: calc(1em / var(--text-scale-ratio));
