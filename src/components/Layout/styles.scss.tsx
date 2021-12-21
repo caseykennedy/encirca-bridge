@@ -21,7 +21,7 @@ export const Main = styled.main`
   border-bottom: ${theme.border};
   margin: 0 auto;
   position: relative;
-  min-height: 30vh;
+  min-height: 85vh;
   max-height: 100%;
   max-width: ${theme.siteWidth};
   width: 100%;

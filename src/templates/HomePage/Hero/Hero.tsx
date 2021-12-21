@@ -33,6 +33,7 @@ const Hero = () => (
       <div className="hero__inner">
         <div className="message">
           <h1>
+            
             Own your branded
             <br />
             <Text sx={{ fontFamily: 'display', fontWeight: 300 }}>

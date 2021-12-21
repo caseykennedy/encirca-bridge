@@ -28,7 +28,7 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <S.Wrapper>
       <Header />
-      <S.Main>{children}</S.Main>
+      <S.Main>{children || 'loading...'}</S.Main>
       <Footer />
     </S.Wrapper>
   )
