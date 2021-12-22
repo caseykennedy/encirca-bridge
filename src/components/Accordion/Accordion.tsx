@@ -113,6 +113,7 @@ const Accordion = ({
           </S.Carat>
         </S.AccordionToggle>
         <S.AccordionContent
+          bg={bg}
           ref={refContent}
           style={{ maxHeight: `${setHeight}` }}
         >

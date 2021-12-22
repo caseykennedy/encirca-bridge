@@ -55,7 +55,7 @@ export const FutureProof = styled.div`
       align-items: center;
       justify-content: center;
       margin: 0 0 ${theme.space[6]};
-      padding: ${theme.space[5]} ${theme.space[6]};
+      padding: ${theme.space[4]} ${theme.space[5]};
 
       background: ${theme.colors.background};
       border: ${theme.border};

@@ -18,17 +18,17 @@ import PoweredBy from '../../../components/PoweredBy'
 
 const Hero = () => (
   <>
-    <S.Hero py={theme.gutter.vertical}>
+    <S.Hero pt={[6, 6, 7]} pb={theme.gutter.vertical}>
       <Flex px={theme.gutter.axis} className="hero__inner">
         <div className="message">
           <h1>
-            
-            Own your branded
+            Protect your brand,
             <br />
+            own your{' '}
             <Text sx={{ fontFamily: 'display', fontWeight: 300 }}>
               blockchain
             </Text>{' '}
-            name/
+            domain/
           </h1>
 
           <Text as="p" pr={[0, 6, 7]}>

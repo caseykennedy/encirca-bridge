@@ -15,13 +15,14 @@ export const ClaimDomainForm = styled.form`
   position: relative;
 
   @media ${theme.mq.tablet} {
-    margin: 0 ${theme.space[6]};
+    margin: 0 ${theme.space[8]};
   }
 
   label {
   }
 
   input {
+    background: ${theme.colors.background};
     border: 1px solid ${theme.colors.primary};
     border-radius: ${theme.borderRadius};
     color: ${theme.colors.text};

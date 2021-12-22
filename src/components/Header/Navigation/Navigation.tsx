@@ -3,7 +3,6 @@
 
 import React, { useState, useCallback } from 'react'
 import { Link } from 'gatsby'
-import HamburgerMenu from 'react-hamburger-menu'
 import { DarkModeSwitch } from 'react-toggle-dark-mode'
 
 // Theme + ui
@@ -13,8 +12,6 @@ import * as S from './styles.scss'
 
 // Components
 import Icon from '../../Icons'
-
-import routes from '../routes.json'
 
 // ___________________________________________________________________
 
@@ -34,10 +31,11 @@ const Navigation = () => {
   return (
     <S.Nav>
       <Link to="/faq" className="faq">
+        <span>?</span>
         FAQ
       </Link>
 
-      <Flex mr={5} ml={4}>
+      <Flex mx={4}>
         <DarkModeSwitch
           moonColor={theme.colors.text}
           sunColor={theme.colors.primary}

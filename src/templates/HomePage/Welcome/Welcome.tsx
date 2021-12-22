@@ -36,7 +36,7 @@ const Welcome = () => (
         </h2>
       </Box>
       <Flex sx={{ flex: 1, justifyContent: 'flex-end' }}>
-        <HandshakeBadge fill="white" />
+        <HandshakeBadge message="Open source" fill="white" />
       </Flex>
     </Flex>
 

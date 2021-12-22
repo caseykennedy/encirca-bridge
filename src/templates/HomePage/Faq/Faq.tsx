@@ -1,8 +1,7 @@
 import * as React from 'react'
-import { lighten } from 'polished'
 
 // Theme + ui
-import { Box, Flex, Heading, Text } from 'theme-ui'
+import { Box, Text } from 'theme-ui'
 import theme from '../../../gatsby-plugin-theme-ui'
 
 // Components
@@ -18,7 +17,7 @@ const data = [
 ]
 
 const accordionProps = {
-  bg: theme.colors.secondary,
+  bg: theme.colors.highlight,
   color: theme.colors.text,
   fontSize: [3],
   fontWeight: 500,
@@ -33,6 +32,7 @@ const Faq: React.FC = () => (
         <Accordion {...accordionProps} title={`${faq.question}`} key={key}>
           <Box
             sx={{
+              borderTop: theme.border,
               px: [4, 5, 5],
               py: 4,
             }}
