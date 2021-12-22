@@ -71,7 +71,7 @@ const Footer = () => (
       </Flex>
 
       <Flex className="legal">
-        <Text>&copy;{getYear()} Bridge</Text>
+        <span>&copy;{getYear()} Bridge</span>
 
         <Flex className="nav">
           <Flex>

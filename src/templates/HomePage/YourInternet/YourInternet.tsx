@@ -14,7 +14,7 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 
 // Components
-import Section from '../../../components/Section'
+import Section, { Row } from '../../../components/Section'
 import HandshakeLogo from '../../../components/SVG/Handshake'
 import Icon from '../../../components/Icons'
 
@@ -87,101 +87,108 @@ const hnsLinks = [
 ]
 
 const YourInternet = () => (
-  <Section overflow="hidden">
-    <Flex
-      sx={{
-        flexDirection: ['column', 'row'],
-        gap: 6,
-        pb: theme.gutter.vertical,
-      }}
-    >
-      <Box sx={{ flex: 1 }}>
-        <Heading as="h2" mb={5}>
-          Your name, your internet. Bridge brings you in.
-        </Heading>
+  <Section border={true} overflow="hidden">
+    <Row>
+      <Flex
+        sx={{
+          flexDirection: ['column', 'row'],
+          gap: [6, 7],
+        }}
+      >
+        <Box sx={{ flex: 1 }}>
+          <Heading as="h2" mb={5}>
+            Your name, your internet. Bridge brings you in.
+          </Heading>
 
-        <BridgeGridArt />
-      </Box>
+          <BridgeGridArt />
+        </Box>
 
-      <Box sx={{ flex: 1 }}>
-        <Text as="p" variant="lead" mb={5}>
-          Handshake replaces the web’s root zone with an open-source protocol
-          which manages the registration, renewal and transfer of DNS top-level
-          domains (TLDs) with the blockchain: crytpo-decentralizing and
-          upgrading the world wide web.
-        </Text>
-        <Text as="p" variant="lead">
-          Bridge acquires your brand name or ICANN TLD on Handshake, seamlessly
-          and worry-free.
-        </Text>
-      </Box>
-    </Flex>
+        <Box sx={{ flex: 1 }}>
+          <Text as="p" variant="lead" mb={5}>
+            Handshake replaces the web’s root zone with an open-source protocol
+            which manages the registration, renewal and transfer of DNS
+            top-level domains (TLDs) with the blockchain: crytpo-decentralizing
+            and upgrading the world wide web.
+          </Text>
+          <Text as="p" variant="lead">
+            Bridge acquires your brand name or ICANN TLD on Handshake,
+            seamlessly and worry-free.
+          </Text>
+        </Box>
+      </Flex>
+    </Row>
 
-    <S.HandshakeFeatures>
-      <div className="handshake">
-        <HandshakeLogo fill="white" />
-      </div>
+    <Row>
+      <S.HandshakeFeatures>
+        <div className="handshake">
+          <HandshakeLogo fill="white" />
+        </div>
 
-      <Grid columns={[1, 2, 3]} gap={[6, 7]} mt={[6, 7]}>
-        {features.map((feature, idx) => (
-          <Box key={idx}>
-            <Flex
-              sx={{
-                alignItems: 'center',
-                mb: 5,
-              }}
-            >
-              {feature.icon}
-              <Heading as="h4" ml={4}>
-                {feature.title}
-              </Heading>
-            </Flex>
-            <Text>{feature.description}</Text>
-          </Box>
-        ))}
-      </Grid>
-    </S.HandshakeFeatures>
-
-    <S.LearnMore>
-      <Box>
-        <Heading as="h4" mb={5}>
-          Enter the third internet era.
-        </Heading>
-      </Box>
-      <Box>
-        <Swiper
-          slidesPerView="auto"
-          spaceBetween={25}
-          pagination={{
-            clickable: true,
-          }}
-        >
-          {hnsLinks.map((item, idx) => (
-            <SwiperSlide key={idx}>
-              <Flex className="slide">
-                <Flex className="slide__figure">{item.figure}</Flex>
-                <a
-                  href={item.url}
-                  target="_blank"
-                  rel="nofollow noreferrer"
-                  className="slide__highlight"
-                >
-                  <Heading
-                    as="h4"
-                    mb={6}
-                    dangerouslySetInnerHTML={{ __html: item.title }}
-                  />
-                  <div className="slide__link">
-                    <Text sx={{ fontSize: 2, mb: 0 }}>{item.description}</Text>
-                    <Icon name="chevron" color="white" />
-                  </div>
-                </a>
+        <Grid columns={[1, 2, 3]} gap={[6, 7]} mt={[6, 7]}>
+          {features.map((feature, idx) => (
+            <Box key={idx}>
+              <Flex
+                sx={{
+                  alignItems: 'center',
+                  mb: 5,
+                }}
+              >
+                {feature.icon}
+                <Heading as="h4" ml={4}>
+                  {feature.title}
+                </Heading>
               </Flex>
-            </SwiperSlide>
+              <Text>{feature.description}</Text>
+            </Box>
           ))}
-        </Swiper>
-      </Box>
-    </S.LearnMore>
+        </Grid>
+      </S.HandshakeFeatures>
+    </Row>
+
+    <Row>
+      <S.LearnMore>
+        <Box>
+          <Heading as="h4" mb={5}>
+            Enter the third internet era.
+          </Heading>
+        </Box>
+        <Box>
+          <Swiper
+            slidesPerView="auto"
+            spaceBetween={25}
+            pagination={{
+              clickable: true,
+            }}
+          >
+            {hnsLinks.map((item, idx) => (
+              <SwiperSlide key={idx}>
+                <Flex className="slide">
+                  <Flex className="slide__figure">{item.figure}</Flex>
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    rel="nofollow noreferrer"
+                    className="slide__highlight"
+                  >
+                    <Heading
+                      as="h4"
+                      mb={6}
+                      dangerouslySetInnerHTML={{ __html: item.title }}
+                    />
+                    <div className="slide__link">
+                      <Text sx={{ fontSize: 2, mb: 0 }}>
+                        {item.description}
+                      </Text>
+                      <Icon name="chevron" color="white" />
+                    </div>
+                  </a>
+                </Flex>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </Box>
+      </S.LearnMore>
+    </Row>
   </Section>
 )
 

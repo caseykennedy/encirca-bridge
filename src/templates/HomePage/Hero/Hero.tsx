@@ -12,25 +12,14 @@ import * as S from './styles.scss'
 import Section from '../../../components/Section'
 import ClaimDomainForm from '../../../components/ClaimDomainForm'
 import SymbolGlobe from '../../../components/SVG/SymbolGlobe'
-
-// SVG
-import Soc2 from '../../../../static/soc2.svg'
+import PoweredBy from '../../../components/PoweredBy'
 
 // ___________________________________________________________________
-
-const PoweredBy = () => (
-  <Text as="p" color="white">
-    Powered by <Text sx={{ fontSize: 3, fontWeight: 600 }}>EnCirca&trade;</Text>
-    <Box as="span" ml={2}>
-      <Soc2 />
-    </Box>
-  </Text>
-)
 
 const Hero = () => (
   <>
     <S.Hero py={theme.gutter.vertical}>
-      <div className="hero__inner">
+      <Flex px={theme.gutter.axis} className="hero__inner">
         <div className="message">
           <h1>
             
@@ -53,10 +42,10 @@ const Hero = () => (
         <div className="art">
           <SymbolGlobe />
         </div>
-      </div>
+      </Flex>
     </S.Hero>
 
-    <Section pt={0} pb={6}>
+    <Section pt={0} pb={0}>
       <ClaimDomainForm />
     </Section>
   </>

@@ -22,6 +22,23 @@ type Props = {
   overflow?: string
 }
 
+type RowProps = {
+  children: React.ReactChild
+}
+
+export const Row = ({ children }: RowProps) => (
+  <Box
+    sx={{
+      pb: [6, 7, 7],
+      '&:last-child': {
+        pb: 0,
+      },
+    }}
+  >
+    {children}
+  </Box>
+)
+
 const Section = ({
   bg,
   border,

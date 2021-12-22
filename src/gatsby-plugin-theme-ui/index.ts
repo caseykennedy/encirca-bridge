@@ -139,7 +139,7 @@ const theme: ThemeShape = {
     mobile: 4,
     tablet: 5,
     desktop: 5,
-    vertical: [6, 6, 7],
+    vertical: [6, 7, 8],
     axis: [5, 5, 6],
   },
 

@@ -22,7 +22,7 @@ import Solids from '../../../../static/solids.svg'
 // ___________________________________________________________________
 
 const FutureProof = () => (
-  <Section>
+  <Section border={true}>
     <S.FutureProof>
       <div className="decorator">
         <Solids />
@@ -31,14 +31,19 @@ const FutureProof = () => (
       <div className="inner">
         <div className="logo-pill">
           <HandshakeSymbol fill="white" />
-          <Flex as="span" sx={{fontSize: 6, fontWeight: 500, mx: 3}}>+</Flex>
+          <Flex as="span" sx={{ fontSize: 6, fontWeight: 500, mx: 3 }}>
+            +
+          </Flex>
           <BridgeSymbol fill={theme.colors.primary} />
         </div>
+
         <h2>Future-proof your brand. Expand the possibilities.</h2>
+
         <p>
           The digital universe is just beginning. Your domain is your digital
           realty, own it.
         </p>
+
         <Link to="/">
           <Button px={5} py={3}>
             Claim your TLD

@@ -1,7 +1,7 @@
 // Hero Styles:
 // ___________________________________________________________________
 
-import {lighten} from 'polished'
+import { lighten } from 'polished'
 import styled from 'styled-components'
 import { Box } from 'theme-ui'
 import theme from '../../../gatsby-plugin-theme-ui'
@@ -22,17 +22,14 @@ export const Hero = styled(Box)`
 
       box-sizing: content-box;
       margin: 0 auto;
-      padding: 0 ${theme.space[5]};
       max-width: ${theme.maxWidth};
 
       @media ${theme.mq.tablet} {
         gap: ${theme.space[6]};
-        padding: ${theme.space[4]} ${theme.space[5]} ${theme.space[6]};
       }
 
       @media ${theme.mq.desktop} {
         gap: ${theme.space[7]};
-        padding: ${theme.space[4]} ${theme.space[6]} ${theme.space[6]};
       }
 
       .message {

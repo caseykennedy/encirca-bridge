@@ -59,7 +59,7 @@ const AcquireYourTld = () => {
   }, [])
 
   return (
-    <Section>
+    <Box>
       <Heading as="h4" mb={5}>
         How to acquire your TLD:
       </Heading>
@@ -109,7 +109,7 @@ const AcquireYourTld = () => {
           </AnimatePresence>
         </figure>
       </S.AcquireYourTld>
-    </Section>
+    </Box>
   )
 }
 

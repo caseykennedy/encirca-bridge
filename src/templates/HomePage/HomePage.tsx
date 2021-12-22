@@ -12,10 +12,11 @@ import * as S from './styles.scss'
 import Hero from './Hero'
 import Welcome from './Welcome'
 import FutureWeb from './FutureWeb'
-import AcquireYourTld from './AcquireYourTld'
 import YourInternet from './YourInternet'
 import FutureProof from './FutureProof'
 import SecureWeb from './SecureWeb'
+import ClaimYours from './ClaimYours'
+import Faq from './Faq'
 
 // ___________________________________________________________________
 
@@ -35,13 +36,11 @@ const HomePage = () => (
     <Hero />
     <Welcome />
     <FutureWeb />
-    <AcquireYourTld />
-    <Divider />
     <YourInternet />
-    <Divider />
     <FutureProof />
-    <Divider />
     <SecureWeb />
+    <ClaimYours />
+    <Faq />
   </S.HomePage>
 )
 

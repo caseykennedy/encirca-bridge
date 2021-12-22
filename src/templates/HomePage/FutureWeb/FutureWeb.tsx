@@ -1,14 +1,16 @@
 // FutureWeb
 // ___________________________________________________________________
 
-import * as React from 'react'
+import React, { ReactNode } from 'react'
+import { darken } from 'polished'
 
 // Theme + ui
 import { Box, Flex, Heading } from 'theme-ui'
 import theme from '../../../gatsby-plugin-theme-ui'
 
 // Components
-import Section from '../../../components/Section'
+import Section, { Row } from '../../../components/Section/Section'
+import AcquireYourTld from '../AcquireYourTld'
 
 // SVG
 import DeviceArrayIllustration from '../../../../static/device-array.svg'
@@ -40,69 +42,73 @@ const features = [
 ]
 
 const FutureWeb = () => (
-  <Section>
-    <Flex
-      sx={{
-        flexDirection: ['column', 'row'],
-        alignItems: 'center',
-        gap: [5, 5, 6],
-        pb: theme.gutter.vertical,
-      }}
-    >
-      <Box sx={{ flex: 1 }}>
-        <Box mr={[4, 6, 7]}>
-          <h2>Step firmly into the future of the web.</h2>
-          <p>
-            Bridge by <strong>EnCirca&trade;</strong> provides Handshake DNS
-            name registration and defensive protection for individuals, brands,
-            trademark lawyers, top Alexa websites and existing ICANN TLDs.
-          </p>
-          <a href="/" target="_blank" className="text--link">
-            Claim your name
-          </a>
+  <Section border={true}>
+    <Row>
+      <Flex
+        sx={{
+          flexDirection: ['column', 'row'],
+          gap: [5, 6, 7],
+        }}
+      >
+        <Box sx={{ flex: 1 }}>
+          <Box mr={[4, 6, 7]}>
+            <h2>Step firmly into the future of the web.</h2>
+            <p>
+              Bridge by <strong>EnCirca&trade;</strong> provides Handshake DNS
+              name registration and defensive protection for individuals,
+              brands, trademark lawyers, top Alexa websites and existing ICANN
+              TLDs.
+            </p>
+            <a href="/" target="_blank" className="text--link">
+              Claim your name
+            </a>
+          </Box>
         </Box>
-      </Box>
 
-      <Box sx={{ flex: 1 }}>
-        <DeviceArrayIllustration />
-      </Box>
-    </Flex>
+        <Box sx={{ flex: 1 }}>
+          <DeviceArrayIllustration />
+        </Box>
+      </Flex>
+    </Row>
 
-    <Flex
-      sx={{
-        flexDirection: ['column', 'column', 'row'],
-        gap: [5, 5, 6],
-        pt: theme.gutter.vertical,
-      }}
-    >
-      {features.map((feature, idx) => (
-        <Box
-          sx={{
-            border: theme.border,
-            borderRadius: theme.borderRadius,
-            flex: 1,
-            padding: [4, 5],
-            transition: theme.transition.global,
-            '&:hover': {
-              background: theme.colors.secondary,
-            },
-          }}
-          key={idx}
-        >
-          <Flex
+    <Row>
+      <Flex
+        sx={{
+          flexDirection: ['column', 'column', 'row'],
+          gap: [5],
+        }}
+      >
+        {features.map((feature, idx) => (
+          <Box
             sx={{
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              mb: 5,
+              border: theme.border,
+              borderRadius: theme.borderRadius,
+              flex: 1,
+              padding: [4, 5],
+              transition: theme.transition.global,
+              '&:hover': {
+                background: darken(0.1, theme.colors.secondary),
+              },
             }}
+            key={idx}
           >
-            <Heading as="h4">{feature.title}</Heading>
-            {feature.icon}
-          </Flex>
-          <p>{feature.description}</p>
-        </Box>
-      ))}
-    </Flex>
+            <Flex
+              sx={{
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                mb: 5,
+              }}
+            >
+              <Heading as="h4">{feature.title}</Heading>
+              {feature.icon}
+            </Flex>
+            <p>{feature.description}</p>
+          </Box>
+        ))}
+      </Flex>
+    </Row>
+
+    <AcquireYourTld />
   </Section>
 )
 

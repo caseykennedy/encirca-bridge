@@ -10,19 +10,18 @@ import Section from '../../../components/Section'
 
 // ___________________________________________________________________
 
-const HandshakeRadius = '125px'
+const HandshakeRadius = '115px'
 
 export const HandshakeFeatures = styled.div`
   background: ${theme.colors.secondary};
   border-radius: calc(${theme.borderRadiusLarge} / 2);
-  margin-top: ${theme.space[6]} 0;
+  margin: ${theme.space[5]} 0;
   padding: ${theme.space[6]};
   position: relative;
   width: 100%;
 
   @media ${theme.mq.tablet} {
     border-radius: ${theme.borderRadiusLarge};
-    margin: ${theme.space[7]} 0;
     padding: ${theme.space[7]};
   }
 
@@ -49,12 +48,7 @@ export const HandshakeFeatures = styled.div`
 `
 
 export const LearnMore = styled.div`
-  padding-top: ${theme.space[6]};
   width: 100%;
-
-  @media ${theme.mq.tablet} {
-    padding-top: ${theme.space[7]};
-  }
 
   .swiper-slide {
     width: 95%;

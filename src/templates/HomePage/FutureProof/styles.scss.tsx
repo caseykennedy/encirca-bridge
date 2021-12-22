@@ -18,6 +18,7 @@ export const FutureProof = styled.div`
   width: 100%;
 
   background: ${theme.colors.highlight};
+  /* border: ${theme.border}; */
   border-radius: calc(${theme.borderRadiusLarge} / 2);
   text-align: center;
 

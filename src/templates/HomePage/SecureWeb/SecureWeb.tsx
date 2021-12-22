@@ -106,23 +106,24 @@ const Timeline = () => (
 )
 
 const SecureWeb = () => (
-  <Section>
+  <Section border={true}>
     <Flex
       sx={{
         alignItems: ['flex-start', 'center'],
         flexDirection: ['column', 'row'],
+        gap: [6, 7],
         justifyContent: 'space-between',
         mb: 5,
       }}
     >
-      <div>
+      <Box sx={{ flex: 1 }}>
         <Heading as="h2">
           For a web that is reliable, private and secure.
         </Heading>
-      </div>
-      <div>
+      </Box>
+      <Flex sx={{ flex: 1, justifyContent: 'flex-end' }}>
         <HandshakeBadge fill="white" message="Delivered on" />
-      </div>
+      </Flex>
     </Flex>
 
     <Timeline />

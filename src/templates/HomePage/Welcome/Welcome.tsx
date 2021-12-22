@@ -23,21 +23,23 @@ const Welcome = () => (
       sx={{
         alignItems: ['flex-start', 'center'],
         flexDirection: ['column', 'row'],
+        gap: [6, 7],
         justifyContent: 'space-between',
         mb: 5,
       }}
     >
-      <Box>
+      <Box sx={{ flex: 1 }}>
         <h2>
           Welcome to the
           <br />
           decentralized internet.
         </h2>
       </Box>
-      <Box>
+      <Flex sx={{ flex: 1, justifyContent: 'flex-end' }}>
         <HandshakeBadge fill="white" />
-      </Box>
+      </Flex>
     </Flex>
+
     <Box>
       <CentralizedDNS />
     </Box>
