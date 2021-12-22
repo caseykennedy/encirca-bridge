@@ -4,7 +4,6 @@ module.exports = {
   // Banner
   // banner: settings.banner.asset.fluid.src,
   bannerUrl: '',
-  
 
   siteTitle: 'Bridge', // Navigation and Site Title
   siteTitleAlt: 'Bridge', // Alternative Site title for SEO
@@ -26,5 +25,5 @@ module.exports = {
 
   // Manifest and Progress color
   themeColor: '#FFFFFF',
-  backgroundColor: '#000000'
+  backgroundColor: '#000000',
 }

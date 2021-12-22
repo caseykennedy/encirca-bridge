@@ -33,7 +33,7 @@ const RootVariables = css`
     --text-scale-ratio: 1.225;
 
     /* line-height */
-    --heading-line-height: 1.25;
+    --heading-line-height: 1.15;
     --body-line-height: 1.65;
 
     /* letter-spacing */

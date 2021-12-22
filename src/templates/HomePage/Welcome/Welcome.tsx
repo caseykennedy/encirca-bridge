@@ -1,7 +1,9 @@
 // Welcome
 // ___________________________________________________________________
 
-import * as React from 'react'
+import React, { useRef } from 'react'
+import { InView } from 'react-intersection-observer'
+import { motion } from 'framer-motion'
 
 // Theme + ui
 import { Box, Flex, Text } from 'theme-ui'
@@ -11,6 +13,7 @@ import * as S from './styles.scss'
 // Components
 import Section from '../../../components/Section'
 import HandshakeBadge from '../../../components/HandshakeBadge'
+import FadeIn from '../../../components/FadeIn'
 
 // SVG
 import CentralizedDNS from '../../../../static/centralized-dns.svg'
@@ -35,14 +38,15 @@ const Welcome = () => (
           decentralized internet.
         </h2>
       </Box>
+
       <Flex sx={{ flex: 1, justifyContent: 'flex-end' }}>
         <HandshakeBadge message="Open source" fill="white" />
       </Flex>
     </Flex>
 
-    <Box>
+    <FadeIn>
       <CentralizedDNS />
-    </Box>
+    </FadeIn>
   </Section>
 )
 

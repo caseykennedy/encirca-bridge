@@ -3,6 +3,7 @@
 // })
 const path = require('path')
 const config = require('./config')
+
 const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix
 
 // Get paths of Gatsby's required rules, which as of writing is located at:

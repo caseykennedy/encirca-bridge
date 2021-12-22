@@ -9,8 +9,9 @@ import { Box, Flex, Heading } from 'theme-ui'
 import theme from '../../../gatsby-plugin-theme-ui'
 
 // Components
-import Section, { Row } from '../../../components/Section/Section'
 import AcquireYourTld from '../AcquireYourTld'
+import Section, { Row } from '../../../components/Section'
+import FadeIn from '../../../components/FadeIn'
 
 // SVG
 import DeviceArrayIllustration from '../../../../static/device-array.svg'
@@ -66,7 +67,9 @@ const FutureWeb = () => (
         </Box>
 
         <Box sx={{ flex: 1 }}>
-          <DeviceArrayIllustration />
+          <FadeIn threshold={0.75}>
+            <DeviceArrayIllustration />
+          </FadeIn>
         </Box>
       </Flex>
     </Row>

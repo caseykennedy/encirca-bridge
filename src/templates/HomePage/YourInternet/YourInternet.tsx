@@ -17,6 +17,7 @@ import 'swiper/css/pagination'
 import Section, { Row } from '../../../components/Section'
 import HandshakeLogo from '../../../components/SVG/Handshake'
 import Icon from '../../../components/Icons'
+import FadeIn from '../../../components/FadeIn'
 
 // SVG
 import StarIcon from '../../../../static/globe.svg'
@@ -100,7 +101,9 @@ const YourInternet = () => (
             Your name, your internet. Bridge brings you in.
           </Heading>
 
-          <BridgeGridArt />
+          <FadeIn threshold={0.75}>
+            <BridgeGridArt />
+          </FadeIn>
         </Box>
 
         <Box sx={{ flex: 1 }}>
@@ -163,7 +166,9 @@ const YourInternet = () => (
             {hnsLinks.map((item, idx) => (
               <SwiperSlide key={idx}>
                 <Flex className="slide">
-                  <Flex className="slide__figure">{item.figure}</Flex>
+                  <Flex className="slide__figure">
+                    <FadeIn threshold={0.75}>{item.figure}</FadeIn>
+                  </Flex>
                   <a
                     href={item.url}
                     target="_blank"

@@ -20,17 +20,6 @@ import Faq from './Faq'
 
 // ___________________________________________________________________
 
-const Divider = () => (
-  <Box
-    sx={{
-      bg: '#26476C',
-      height: '1px',
-      width: '100%',
-      my: [5, 6],
-    }}
-  />
-)
-
 const HomePage = () => (
   <S.HomePage>
     <Hero />
