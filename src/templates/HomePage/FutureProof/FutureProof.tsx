@@ -3,6 +3,7 @@
 
 import * as React from 'react'
 import { Link } from 'gatsby'
+import { darken } from 'polished'
 
 // Theme + ui
 import { Button, Flex } from 'theme-ui'
@@ -22,7 +23,7 @@ import Solids from '../../../../static/solids.svg'
 // ___________________________________________________________________
 
 const FutureProof = () => (
-  <Section border={true}>
+  <Section bg={darken(0.015, theme.colors.background)} border={true}>
     <S.FutureProof>
       <div className="decorator">
         <Solids />

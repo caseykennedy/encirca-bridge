@@ -2,12 +2,14 @@
 
 // ___________________________________________________________________
 
+import { darken } from 'polished'
 import styled from 'styled-components'
 import theme from '../../gatsby-plugin-theme-ui'
 
 // ___________________________________________________________________
 
 export const Footer = styled.footer`
+  background: ${darken(0.015, theme.colors.background)};
   font-weight: 400;
   /* border-bottom: ${theme.border}; */
   padding: ${theme.space[5]} 0;
