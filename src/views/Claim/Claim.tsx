@@ -27,11 +27,9 @@ import Globe from '../../../static/globe.svg'
 
 // ___________________________________________________________________
 
-const tldValue = ''
-
 const Claim = () => (
   <S.ClaimPage>
-    <Section maxWidth={1024} pt={[5, 6, 7]} pb={[5, 6, 7]}>
+    <Section maxWidth={1024} pt={[6, 7, 7]} pb={[6, 7, 7]}>
       <Flex sx={{ flexDirection: ['column', 'row'], gap: [5, 6, 7] }}>
         <Box sx={{ flex: 1.5 }}>
           <h1>Let&apos;s claim your TLD/</h1>
@@ -44,14 +42,20 @@ const Claim = () => (
       </Flex>
     </Section>
 
-    <Section maxWidth={1024} pt={0}>
+    <Section border={true} maxWidth={1024} pt={[6, 7, 7]}>
       <S.ClaimForm className="claim-form">
         <fieldset>
           <div className="form-group">
             <label className="input-label" htmlFor="tld">
               TLD*
             </label>
-            <Input name="tld" type="text" id="tld" aria-required="true" />
+            <Input
+              name="tld"
+              type="text"
+              id="tld"
+              className="tld"
+              aria-required="true"
+            />
           </div>
 
           <div className="form-group">
@@ -88,68 +92,50 @@ const Claim = () => (
           <div className="form-group  form-group__checkbox">
             <div className="title">I&apos;m registering a:</div>
 
-            <div>
-              <label className="checkbox-label" htmlFor="name">
-                <Checkbox id="name" name="name" />
-                <span>Name</span>
-              </label>
-            </div>
+            <label className="checkbox-label" htmlFor="name">
+              <Checkbox id="name" name="name" />
+              <span>Name</span>
+            </label>
 
-            <div>
-              <label className="checkbox-label" htmlFor="brand">
-                <Checkbox id="brand" name="brand" />
-                <span>Brand</span>
-              </label>
-            </div>
+            <label className="checkbox-label" htmlFor="brand">
+              <Checkbox id="brand" name="brand" />
+              <span>Brand</span>
+            </label>
 
-            <div>
-              <label className="checkbox-label" htmlFor="trademark">
-                <Checkbox id="trademark" name="trademark" />
-                <span>Trademark</span>
-              </label>
-            </div>
+            <label className="checkbox-label" htmlFor="trademark">
+              <Checkbox id="trademark" name="trademark" />
+              <span>Trademark</span>
+            </label>
 
-            <div>
-              <label className="checkbox-label" htmlFor="copyright">
-                <Checkbox id="copyright" name="copyright" />
-                <span>Copyright</span>
-              </label>
-            </div>
+            <label className="checkbox-label" htmlFor="copyright">
+              <Checkbox id="copyright" name="copyright" />
+              <span>Copyright</span>
+            </label>
 
-            <div>
-              <label className="checkbox-label" htmlFor="serviceMark">
-                <Checkbox id="serviceMark" name="serviceMark" />
-                <span>Service mark</span>
-              </label>
-            </div>
+            <label className="checkbox-label" htmlFor="serviceMark">
+              <Checkbox id="serviceMark" name="serviceMark" />
+              <span>Service mark</span>
+            </label>
 
-            <div>
-              <label className="checkbox-label" htmlFor="slogan">
-                <Checkbox id="slogan" name="slogan" />
-                <span>Slogan</span>
-              </label>
-            </div>
+            <label className="checkbox-label" htmlFor="slogan">
+              <Checkbox id="slogan" name="slogan" />
+              <span>Slogan</span>
+            </label>
 
-            <div>
-              <label className="checkbox-label" htmlFor="icannTLD">
-                <Checkbox id="icannTLD" name="icannTLD" />
-                <span>ICANN TLD</span>
-              </label>
-            </div>
+            <label className="checkbox-label" htmlFor="icannTLD">
+              <Checkbox id="icannTLD" name="icannTLD" />
+              <span>ICANN TLD</span>
+            </label>
 
-            <div>
-              <label className="checkbox-label" htmlFor="fairUse">
-                <Checkbox id="fairUse" name="fairUse" />
-                <span>Fair use</span>
-              </label>
-            </div>
+            <label className="checkbox-label" htmlFor="fairUse">
+              <Checkbox id="fairUse" name="fairUse" />
+              <span>Fair use</span>
+            </label>
 
-            <div>
-              <label className="checkbox-label" htmlFor="other">
-                <Checkbox id="other" name="other" />
-                <span>Other</span>
-              </label>
-            </div>
+            <label className="checkbox-label" htmlFor="other">
+              <Checkbox id="other" name="other" />
+              <span>Other</span>
+            </label>
           </div>
 
           {/* <div className="form-group">

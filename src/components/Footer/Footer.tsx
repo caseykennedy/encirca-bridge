@@ -16,6 +16,8 @@ import Background from '../../../static/bg-footer.svg'
 
 // ___________________________________________________________________
 
+const mailto = 'mailto:info@bridge.com'
+
 const navLinks = [
   {
     name: 'Terms & Conditions',
@@ -24,10 +26,6 @@ const navLinks = [
   {
     name: 'Privacy Policy',
     path: '/',
-  },
-  {
-    name: 'Contact',
-    path: 'mailto:info@bridge.com',
   },
 ]
 
@@ -80,6 +78,9 @@ const Footer = () => (
                 <Link to={item.path}>{item.name}</Link>
               </Text>
             ))}
+            <Text ml={5} mb={0}>
+              <a href={mailto}>Contact</a>
+            </Text>
           </Flex>
 
           <Flex ml={6}>

@@ -8,6 +8,8 @@ import theme from '../../gatsby-plugin-theme-ui'
 
 // ___________________________________________________________________
 
+const inputGlow = `0 0 10px ${theme.colors.primary}`
+
 export const ClaimPage = styled.div``
 
 export const ClaimForm = styled.form`
@@ -57,12 +59,21 @@ export const ClaimForm = styled.form`
         color: ${theme.colors.gray};
       }
 
+      &:focus {
+        border-color: ${theme.colors.primary};
+        box-shadow: ${inputGlow};
+      }
+
       @media ${theme.mq.tablet} {
         font-size: ${theme.fontSizes[4]};
         margin-bottom: ${theme.space[4]};
         padding: ${theme.space[4]};
         padding-left: ${theme.space[9]};
         height: ${theme.inputHeight};
+      }
+
+      &.tld {
+        background-color: ${theme.colors.secondary};
       }
     }
 
@@ -94,6 +105,16 @@ export const ClaimForm = styled.form`
         font-size: ${theme.fontSizes[3]};
         margin-bottom: ${theme.space[4]};
       }
+
+      &:focus {
+        outline: none;
+        border-color: ${theme.colors.primary};
+        box-shadow: ${inputGlow};
+      }
+
+      &::placeholder {
+        color: ${theme.colors.text};
+      }
     }
 
     &__checkbox {
@@ -102,18 +123,15 @@ export const ClaimForm = styled.form`
       flex-wrap: wrap;
       justify-content: center;
       gap: ${theme.space[2]};
-      margin-bottom: ${theme.space[5]};
-
-      &:nth-child(n5) {
-        flex-basis: 100%;
-      }
+      margin-bottom: ${theme.space[3]};
 
       @media ${theme.mq.tablet} {
         gap: ${theme.space[4]};
+        margin-bottom: ${theme.space[5]};
       }
 
-      div {
-        flex: 1;
+      &:nth-child(n5) {
+        flex-basis: 100%;
       }
 
       .title {
@@ -125,6 +143,7 @@ export const ClaimForm = styled.form`
       }
 
       .checkbox-label {
+        flex: 1;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -139,27 +158,44 @@ export const ClaimForm = styled.form`
           padding: ${theme.space[5]} ${theme.space[6]};
         }
 
-        &:hover {
+        &:hover,
+        &--active {
           background: ${darken(0.25, theme.colors.primary)};
           border-color: ${theme.colors.primary};
         }
 
         div {
           display: none;
-        }
 
-        input, svg {
-          height: initial;
-          margin-bottom: 0;
-          padding: 0;
-          width: fit-content;
+          input,
+          svg {
+            height: initial;
+            margin-bottom: 0;
+            padding: 0;
+            width: fit-content;
 
-          /* position: absolute;
+            /* position: absolute;
           opacity: 0;
           cursor: pointer;
           height: 0;
           width: 0; */
+          }
         }
+
+        /* input {
+          cursor: pointer;
+          margin-bottom: 0;
+          opacity: 0;
+          padding: 0;
+          position: absolute;
+          height: 0;
+          width: 0;
+        }
+
+        input:checked ~ label {
+          background: ${darken(0.25, theme.colors.primary)};
+          border-color: ${theme.colors.primary};
+        } */
       }
     }
   }
@@ -169,14 +205,29 @@ export const ClaimForm = styled.form`
     align-items: center;
     justify-content: center;
 
-    margin-top: ${theme.space[7]};
+    /* margin-top: ${theme.space[5]}; */
     height: ${theme.inputHeight};
 
     button {
       border: 1px solid ${theme.colors.primary};
       font-size: ${theme.fontSizes[3]};
-      padding: ${theme.space[4]};
+      padding: ${theme.space[4]} ${theme.space[7]};
     }
+  }
+
+  // Override webkit autocomplete highlight
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    -webkit-text-fill-color: ${theme.colors.text};
+    -webkit-box-shadow: 0 0 0px 1000px ${theme.colors.background} inset;
+    transition: background-color 5000s ease-in-out 0s;
   }
 `
 

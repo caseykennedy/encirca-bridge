@@ -88,7 +88,7 @@ type ThemeShape = {
   }
 }
 
-const breakpoints: string[] = ['768px', '980px']
+const breakpoints = ['768px', '980px']
 
 const theme: ThemeShape = {
   breakpoints,
