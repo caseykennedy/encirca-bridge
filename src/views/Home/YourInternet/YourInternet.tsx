@@ -20,7 +20,6 @@ import Icon from '../../../components/Icons'
 import FadeIn from '../../../components/FadeIn'
 
 // SVG
-import StarIcon from '../../../../static/globe.svg'
 import BridgeGridArt from '../../../../static/bridge-grid.svg'
 import IconPlugPlay from '../../../../static/icon-plug-play.svg'
 import IconNoSquatting from '../../../../static/icon-no-squatting.svg'

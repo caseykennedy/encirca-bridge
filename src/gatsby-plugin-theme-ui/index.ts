@@ -40,18 +40,18 @@ type ThemeShape = {
   }
   buttons: {
     primary: {
-      [key: string]: any
+      [key: string]: unknown
     }
     outline: {
-      [key: string]: any
+      [key: string]: unknown
     }
   }
   text: {
     default: {
-      [key: string]: any
+      [key: string]: unknown
     }
     lead: {
-      [key: string]: any
+      [key: string]: unknown
     }
   }
   strokeWidth: string
@@ -140,7 +140,7 @@ const theme: ThemeShape = {
     tablet: 5,
     desktop: 5,
     vertical: [6, 7, 8],
-    axis: [5, 5, 6],
+    axis: [4, 5, 6],
   },
 
   // Typography
@@ -171,6 +171,50 @@ const theme: ThemeShape = {
     medium: 500,
     bold: 600,
     black: 700,
+  },
+
+  // Constants
+  // ___________________________________________________________________
+
+  text: {
+    default: {
+      marginBottom: 4,
+    },
+    lead: {
+      fontSize: [4, 4, 5],
+      color: 'textMuted',
+      fontWeight: '400',
+      lineHeight: 1.25,
+    },
+  },
+
+  border: '1px solid #26476C',
+  borderRadius: '4px',
+  borderRadiusLarge: '55px',
+  shadow: '0px 0px 7px rgba(0, 0, 0, 0.75)',
+
+  maxWidth: '1200px',
+  siteWidth: '100%',
+  logoHeight: '32px',
+  headerHeight: '80px',
+  iconWidth: '18px',
+  inputHeight: '94px',
+  strokeWidth: '2px',
+
+  grid: {
+    gap: [4, 5],
+  },
+
+  transition: {
+    all: 'all 0.22s ease-in-out 0s',
+    global: '0.22s ease-in-out 0s',
+  },
+
+  transform: {
+    matrix: {
+      from: 'matrix(1, 0, 0, 1, 24, 0)',
+      to: 'matrix(1, 0, 0, 1, 0, 0)',
+    },
   },
 
   // Button
@@ -221,49 +265,8 @@ const theme: ThemeShape = {
     },
   },
 
-  // Base
+  // Root
   // ___________________________________________________________________
-
-  text: {
-    default: {
-      marginBottom: 4,
-    },
-    lead: {
-      fontSize: [4, 4, 5],
-      color: 'textMuted',
-      fontWeight: '400',
-      lineHeight: 1.25,
-    },
-  },
-
-  border: '1px solid #26476C',
-  borderRadius: '4px',
-  borderRadiusLarge: '55px',
-  shadow: '0px 0px 7px rgba(0, 0, 0, 0.75)',
-
-  maxWidth: '1200px',
-  siteWidth: '100%',
-  logoHeight: '32px',
-  headerHeight: '80px',
-  iconWidth: '18px',
-  inputHeight: '94px',
-  strokeWidth: '2px',
-
-  grid: {
-    gap: [4, 5],
-  },
-
-  transition: {
-    all: 'all 0.22s ease-in-out 0s',
-    global: '0.22s ease-in-out 0s',
-  },
-
-  transform: {
-    matrix: {
-      from: 'matrix(1, 0, 0, 1, 24, 0)',
-      to: 'matrix(1, 0, 0, 1, 0, 0)',
-    },
-  },
 
   root: {
     mouseX: 'var(--mouse-x)',

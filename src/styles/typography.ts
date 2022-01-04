@@ -227,6 +227,7 @@ const Typography = css`
   h1,
   .text--xxl {
     font-size: calc(${theme.fontSizes[6]});
+    margin: 0 0 ${theme.space[2]};
 
     @media ${theme.mq.tablet} {
       font-size: ${theme.fontSizes[7]};

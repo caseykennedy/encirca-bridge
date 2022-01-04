@@ -30,12 +30,12 @@ const Navigation = () => {
 
   return (
     <S.Nav>
-      <Link to="/faq" className="faq">
+      <Link to="/" className="faq">
         <span>?</span>
         FAQ
       </Link>
 
-      <Flex mx={4}>
+      {/* <Flex mx={4}>
         <DarkModeSwitch
           moonColor={theme.colors.text}
           sunColor={theme.colors.primary}
@@ -43,9 +43,9 @@ const Navigation = () => {
           onChange={toggleDarkMode}
           size={20}
         />
-      </Flex>
+      </Flex> */}
 
-      <Link to="/register" className="btn">
+      <Link to="/claim" className="btn">
         <Button variant="outline">
           Claim your name
           <Icon name="chevron" />

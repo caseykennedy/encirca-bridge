@@ -1,7 +1,7 @@
 // FutureWeb
 // ___________________________________________________________________
 
-import React, { ReactNode } from 'react'
+import * as React from 'react'
 import { darken } from 'polished'
 
 // Theme + ui
@@ -58,7 +58,8 @@ const FutureWeb = () => (
               Bridge by <strong>EnCirca&trade;</strong> provides Handshake DNS
               name registration and defensive protection for individuals,
               brands, trademark lawyers, top Alexa websites and existing ICANN
-              TLDs.
+              TLDs. Your trusted custdodian of TLD’s. Weather its reserved,
+              brand new name, We’ll help aquire your name on the dWeb.
             </p>
             <a href="/" target="_blank" className="text--link">
               Claim your name

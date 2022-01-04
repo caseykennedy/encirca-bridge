@@ -9,18 +9,11 @@ import { Box, Text, Heading } from 'theme-ui'
 import theme from '../../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
 
-// Components
-import Section from '../../../components/Section'
-
 // SVG
 import DocGlobeArt from '../../../../static/doc-globe.svg'
+import ThumbShield from '../../../../static/icon-thumb-shield.svg'
 
 // ___________________________________________________________________
-
-type TabProps = {
-  id: number
-  title: string
-}
 
 const data = [
   {
@@ -35,14 +28,14 @@ const data = [
     step: 'b',
     title:
       "Is your brand name available on Handshake? We'll initiate and WIN the auction.",
-    content: 'B',
+    content: <ThumbShield />,
   },
   {
     id: 2,
     step: 'c',
     title:
       "Is your brand already registered on Handshake? We'll help you get it back. ",
-    content: 'C',
+    content: <DocGlobeArt />,
   },
 ]
 
@@ -91,20 +84,7 @@ const AcquireYourTld = () => {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.1 }}
             >
-              {currentTab ? (
-                <Text
-                  sx={{
-                    fontSize: '14rem',
-                    fontFamily: 'display',
-                    fontWeight: 600,
-                    mb: 0,
-                  }}
-                >
-                  {currentTab.content}
-                </Text>
-              ) : (
-                '😋'
-              )}
+              {currentTab && <Box>{currentTab.content}</Box>}
             </motion.div>
           </AnimatePresence>
         </figure>

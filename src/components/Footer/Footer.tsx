@@ -19,11 +19,11 @@ import Background from '../../../static/bg-footer.svg'
 const navLinks = [
   {
     name: 'Terms & Conditions',
-    path: '/terms-conditions',
+    path: '/',
   },
   {
     name: 'Privacy Policy',
-    path: '/privacy-policy',
+    path: '/',
   },
   {
     name: 'Contact',

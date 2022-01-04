@@ -18,6 +18,7 @@ export const Nav = styled.nav`
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    margin-right: ${theme.space[4]};
 
     color: ${theme.colors.gray};
     font-weight: 500;

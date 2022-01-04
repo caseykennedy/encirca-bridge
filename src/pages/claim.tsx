@@ -1,17 +1,17 @@
-// Home page
+// Claim page
 // ___________________________________________________________________
 
 import React from 'react'
 import SEO from '../components/SEO'
-import HomePage from '../views/Home'
+import ClaimPage from '../views/Claim'
 
 // ___________________________________________________________________
 
-const Index = () => (
+const Claim = () => (
   <>
     <SEO />
-    <HomePage />
+    <ClaimPage />
   </>
 )
 
-export default Index
+export default Claim

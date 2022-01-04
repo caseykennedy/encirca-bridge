@@ -1,14 +1,10 @@
 // Welcome
 // ___________________________________________________________________
 
-import React, { useRef } from 'react'
-import { InView } from 'react-intersection-observer'
-import { motion } from 'framer-motion'
+import * as React from 'react'
 
 // Theme + ui
-import { Box, Flex, Text } from 'theme-ui'
-import theme from '../../../gatsby-plugin-theme-ui'
-import * as S from './styles.scss'
+import { Box, Flex } from 'theme-ui'
 
 // Components
 import Section from '../../../components/Section'
