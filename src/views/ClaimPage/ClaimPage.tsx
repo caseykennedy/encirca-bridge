@@ -129,11 +129,11 @@ const ClaimPage = () => {
     setComments(target.value)
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     setLoading(true)
 
-    fetch('/', {
+    fetch('/claim', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: qs.stringify({ 'form-name': 'claimDomain', ...formData }),
@@ -143,13 +143,13 @@ const ClaimPage = () => {
         console.log('response', response)
         setLoading(false)
         alert('Great success!')
-        setTld('')
-        setFirstName('')
-        setLastName('')
-        setEmail('')
-        setOrganization('')
-        setComments('')
-        setRegTypeList([])
+        // setTld('')
+        // setFirstName('')
+        // setLastName('')
+        // setEmail('')
+        // setOrganization('')
+        // setComments('')
+        // setRegTypeList([])
       })
       .catch((error) => {
         setError('FUNCTION ERROR')
