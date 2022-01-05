@@ -129,17 +129,9 @@ const ClaimPage = () => {
     setComments(target.value)
   }
 
-  const handleSubmit = (e: React.SyntheticEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setLoading(true)
-
-    setTld('')
-    setFirstName('')
-    setLastName('')
-    setEmail('')
-    setOrganization('')
-    setComments('')
-    setRegTypeList([])
 
     fetch('/', {
       method: 'POST',
@@ -151,6 +143,13 @@ const ClaimPage = () => {
         console.log('response', response)
         setLoading(false)
         alert('Great success!')
+        setTld('')
+        setFirstName('')
+        setLastName('')
+        setEmail('')
+        setOrganization('')
+        setComments('')
+        setRegTypeList([])
       })
       .catch((error) => {
         setError('FUNCTION ERROR')
@@ -312,7 +311,7 @@ const ClaimPage = () => {
               </Text>
             )}
             <Button
-              type="button"
+              type="submit"
               aria-label="submit"
               aria-describedby="descriptionSubmit"
             >
