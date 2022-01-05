@@ -68,8 +68,8 @@ module.exports = {
         'react/destructuring-assignment': 'off',
         'no-shadow': 'off',
         '@typescript-eslint/no-shadow': 'off',
-        "no-console": "off",
-        "@typescript-eslint/restrict-template-expressions": "off",
+        'no-console': 'off',
+        '@typescript-eslint/restrict-template-expressions': 'off',
       },
       parser: '@typescript-eslint/parser',
       parserOptions: {
@@ -87,7 +87,7 @@ module.exports = {
       rules: {
         'react/jsx-props-no-spreading': 'off',
         'react/jsx-filename-extension': 'off',
-        "no-console": "off",
+        'no-console': 'off',
       },
       plugins: [
         'testing-library',

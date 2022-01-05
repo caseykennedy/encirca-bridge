@@ -179,7 +179,7 @@ const ClaimPage = () => {
           className="claim-form"
           data-netlify="true"
           method="post"
-          // onSubmit={handleSubmit}
+          onSubmit={handleSubmit}
         >
           <input type="hidden" name="form-name" value="claimDomain" />
           <fieldset>
