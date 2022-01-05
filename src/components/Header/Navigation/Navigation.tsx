@@ -20,20 +20,20 @@ const Navigation = () => {
   const [isDarkMode, setDarkMode] = useState(false)
   const isDark = colorMode === 'dark'
 
-  const toggleDarkMode = useCallback(
-    (checked: boolean) => {
-      setDarkMode(checked)
-      setColorMode(colorMode === 'default' ? 'dark' : 'default')
-    },
-    [setColorMode, colorMode]
-  )
+  // const toggleDarkMode = useCallback(
+  //   (checked: boolean) => {
+  //     setDarkMode(checked)
+  //     setColorMode(colorMode === 'default' ? 'dark' : 'default')
+  //   },
+  //   [setColorMode, colorMode]
+  // )
 
   return (
     <S.Nav>
-      <Link to="/" className="faq">
+      <a href="/" className="faq">
         <span>?</span>
         FAQ
-      </Link>
+      </a>
 
       {/* <Flex mx={4}>
         <DarkModeSwitch

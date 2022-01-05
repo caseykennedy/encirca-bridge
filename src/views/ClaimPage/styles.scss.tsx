@@ -10,8 +10,6 @@ import theme from '../../gatsby-plugin-theme-ui'
 
 const inputGlow = `0 0 10px ${theme.colors.primary}`
 
-export const ClaimPage = styled.div``
-
 export const ClaimForm = styled.form`
   margin: 0;
   position: relative;
@@ -102,7 +100,7 @@ export const ClaimForm = styled.form`
       padding: ${theme.space[3]};
 
       @media ${theme.mq.tablet} {
-        font-size: ${theme.fontSizes[3]};
+        /* font-size: ${theme.fontSizes[3]}; */
         margin-bottom: ${theme.space[4]};
       }
 

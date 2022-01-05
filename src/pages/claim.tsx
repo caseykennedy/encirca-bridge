@@ -3,7 +3,7 @@
 
 import React from 'react'
 import SEO from '../components/SEO'
-import ClaimPage from '../views/Claim'
+import ClaimPage from '../views/ClaimPage'
 
 // ___________________________________________________________________
 

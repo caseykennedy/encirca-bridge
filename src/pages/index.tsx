@@ -3,7 +3,7 @@
 
 import React from 'react'
 import SEO from '../components/SEO'
-import HomePage from '../views/Home'
+import HomePage from '../views/HomePage'
 
 // ___________________________________________________________________
 
