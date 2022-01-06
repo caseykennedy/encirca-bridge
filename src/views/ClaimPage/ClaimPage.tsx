@@ -137,7 +137,6 @@ const ClaimPage = () => {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams({
         'form-name': 'claimDomainForm',
-        ...formData,
       }).toString(),
     })
       .then((response) => {
