@@ -57,7 +57,7 @@
     "gatsby-plugin-typescript": "^3.3.0",
     "gatsby-source-filesystem": "^3.14.0",
     "gatsby-transformer-sharp": "^3.14.0",
-    "gatsby-transformer-yaml": "^4.3.0",
+    "gatsby-transformer-yaml": "^3.14.0",
     "lodash": "^4.17.20",
     "polished": "^4.1.1",
     "query-string": "^7.0.1",

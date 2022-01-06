@@ -78,7 +78,7 @@ const ClaimPage = () => {
     email,
     organization,
     comments,
-    // regTypeList,
+    regTypeList,
   }
 
   // const handleChange = (e: React.ChangeEvent<HTMLInputElement>) =>
