@@ -50,14 +50,15 @@ type FormDataShape = {
 //   regTypeList: [],
 // }
 
-// interface GenericObject {
-//   [key: string]: string | number | boolean,
-// }
+interface GenericObject {
+  [key: string]: string | number | boolean
+}
 
-// const encode = (data: GenericObject) =>
-//   Object.keys(data)
+// function encode(data: any) {
+//   return Object.keys(data)
 //     .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
 //     .join('&')
+// }
 
 const ClaimPage = () => {
   const [tld, setTld] = useState('')
@@ -77,10 +78,8 @@ const ClaimPage = () => {
     email,
     organization,
     comments,
-    regTypeList,
+    // regTypeList,
   }
-
-  console.log('formData:', formData)
 
   // const handleChange = (e: React.ChangeEvent<HTMLInputElement>) =>
   //   setFormState({ ...formState, [e.target.name]: e.target.value })
@@ -133,16 +132,17 @@ const ClaimPage = () => {
     e.preventDefault()
     setLoading(true)
 
-    fetch('/claim', {
+    fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: qs.stringify({ 'form-name': 'claimDomain', ...formData }),
-      // body: encode({ 'form-name': 'claimDomain', ...formData }),
+      body: new URLSearchParams({
+        'form-name': 'claimDomainForm',
+        ...formData,
+      }).toString(),
     })
       .then((response) => {
         console.log('response', response)
         setLoading(false)
-        alert('Great success!')
         // setTld('')
         // setFirstName('')
         // setLastName('')
@@ -159,7 +159,7 @@ const ClaimPage = () => {
   }
 
   return (
-    <div>
+    <>
       <Section maxWidth={1024} pt={[6, 7, 7]} pb={[6, 7, 7]}>
         <Flex sx={{ flexDirection: ['column', 'row'], gap: [5, 6, 7] }}>
           <Box sx={{ flex: 1.5 }}>
@@ -179,8 +179,9 @@ const ClaimPage = () => {
           data-netlify="true"
           method="post"
           onSubmit={handleSubmit}
+          id="claimDomainForm"
         >
-          <input type="hidden" name="form-name" value="claimDomain" />
+          <input type="hidden" name="form-name" value="claimDomainForm" />
           <fieldset>
             <div className="form-group">
               <Label className="input-label" htmlFor="tld">
@@ -320,7 +321,7 @@ const ClaimPage = () => {
           </div>
         </S.ClaimForm>
       </Section>
-    </div>
+    </>
   )
 }
 

@@ -16,7 +16,7 @@ import Faq from './Faq'
 // ___________________________________________________________________
 
 const HomePage = () => (
-  <div>
+  <>
     <Hero />
     <Welcome />
     <FutureWeb />
@@ -25,7 +25,7 @@ const HomePage = () => (
     <SecureWeb />
     <ClaimYours />
     <Faq />
-  </div>
+  </>
 )
 
 export default HomePage

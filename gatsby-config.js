@@ -19,7 +19,7 @@ const gatsbyRequiredRules = path.join(
 )
 
 module.exports = {
-  flags: { PRESERVE_WEBPACK_CACHE: true },
+  flags: { PRESERVE_WEBPACK_CACHE: true, DEV_SSR: false },
   pathPrefix: config.pathPrefix,
   siteMetadata: {
     siteUrl: config.siteUrl + pathPrefix,
