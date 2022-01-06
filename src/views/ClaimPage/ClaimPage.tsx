@@ -30,36 +30,6 @@ import regTypes from './regTypes.json'
 
 // ___________________________________________________________________
 
-type FormDataShape = {
-  tld: string
-  firstName: string
-  lastName: string
-  email: string
-  organization: string
-  comments: string
-  regTypeList: string[]
-}
-
-// const initialState = {
-//   tld: '',
-//   firstName: '',
-//   lastName: '',
-//   email: '',
-//   organization: '',
-//   comments: '',
-//   regTypeList: [],
-// }
-
-interface GenericObject {
-  [key: string]: string | number | boolean
-}
-
-// function encode(data: any) {
-//   return Object.keys(data)
-//     .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
-//     .join('&')
-// }
-
 const ClaimPage = () => {
   const [tld, setTld] = useState('')
   const [firstName, setFirstName] = useState('')
@@ -68,7 +38,7 @@ const ClaimPage = () => {
   const [organization, setOrganization] = useState('')
   const [comments, setComments] = useState('')
   const [regTypeList, setRegTypeList] = useState<string[]>([])
-  const [error, setError] = useState('')
+  const [error, setError] = useState<string | undefined>('')
   const [loading, setLoading] = useState(false)
 
   const formData = {
@@ -78,7 +48,7 @@ const ClaimPage = () => {
     email,
     organization,
     comments,
-    regTypeList,
+    // regTypeList,
   }
 
   // const handleChange = (e: React.ChangeEvent<HTMLInputElement>) =>
@@ -137,6 +107,7 @@ const ClaimPage = () => {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams({
         'form-name': 'claimDomainForm',
+        ...formData,
       }).toString(),
     })
       .then((response) => {
@@ -150,10 +121,10 @@ const ClaimPage = () => {
         // setComments('')
         // setRegTypeList([])
       })
-      .catch((error) => {
-        setError('FUNCTION ERROR')
+      .catch((e: undefined) => {
+        setError(e)
         console.log('ERROR')
-        console.log('error:', error)
+        console.log('error:', e)
       })
   }
 
@@ -243,7 +214,7 @@ const ClaimPage = () => {
               />
             </div>
 
-            <div className="form-group  form-group__checkbox">
+            {/* <div className="form-group  form-group__checkbox">
               <div className="title">I&apos;m registering a:</div>
 
               {regTypes.map(({ name }, index) => (
@@ -256,7 +227,7 @@ const ClaimPage = () => {
                   <span>{name}</span>
                 </label>
               ))}
-            </div>
+            </div> */}
 
             {/* <div className="form-group">
               <Select
