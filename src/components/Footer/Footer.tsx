@@ -34,14 +34,6 @@ const socialLinks = [
     name: 'twitter',
     path: 'http://discord.com',
   },
-  {
-    name: 'twitter',
-    path: 'http://twitter.com',
-  },
-  {
-    name: 'twitter',
-    path: 'http://github.com',
-  },
 ]
 
 const getYear = () => new Date().getFullYear()
@@ -49,8 +41,8 @@ const getYear = () => new Date().getFullYear()
 const Footer = () => (
   <S.Footer>
     <Flex px={theme.gutter.axis} className="footer__inner">
-      <Flex className="utilities">
-        <Flex className="util">
+      <div className="utilities">
+        <div className="util">
           <h4>Connect with us</h4>
           <Flex mt={5}>
             {socialLinks.map((item, idx) => (
@@ -61,33 +53,31 @@ const Footer = () => (
               </Box>
             ))}
           </Flex>
-        </Flex>
+        </div>
 
-        <Flex className="util">
+        <div className="util">
           <h4>Stay up to date with Bridge</h4>
-        </Flex>
-      </Flex>
+        </div>
+      </div>
 
-      <Flex className="legal">
+      <div className="legal">
         <span>&copy;{getYear()} Bridge</span>
 
-        <Flex className="nav">
-          <Flex>
+        <div className="nav">
+          <div className="nav__links">
             {navLinks.map((item, idx) => (
-              <Text ml={5} mb={0} key={idx}>
-                <Link to={item.path}>{item.name}</Link>
-              </Text>
+              <Link to={item.path} key={idx}>
+                {item.name}
+              </Link>
             ))}
-            <Text ml={5} mb={0}>
-              <a href={mailto}>Contact</a>
-            </Text>
-          </Flex>
+            <a href={mailto}>Contact</a>
+          </div>
 
-          <Flex ml={6}>
+          <div className="logo">
             <Logo />
-          </Flex>
-        </Flex>
-      </Flex>
+          </div>
+        </div>
+      </div>
     </Flex>
 
     <div className="decorator">

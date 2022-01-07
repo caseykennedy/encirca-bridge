@@ -12,15 +12,15 @@ export const Footer = styled.footer`
   background: ${darken(0.015, theme.colors.background)};
   font-weight: 400;
   /* border-bottom: ${theme.border}; */
-  padding: ${theme.space[5]} 0;
+  padding: ${theme.space[6]} 0;
   overflow: hidden;
-  position: sticky;
+  position: relative;
   bottom: 0;
   width: 100%;
   z-index: 0;
 
   @media ${theme.mq.tablet} {
-    padding: ${theme.space[6]} 0;
+    position: sticky;
   }
 
   .decorator {
@@ -65,11 +65,13 @@ export const Footer = styled.footer`
       .utilities {
         display: flex;
         flex-direction: column;
-        padding-bottom: ${theme.space[10]};
-        gap: ${theme.space[5]};
+        margin-bottom: ${theme.space[7]};
+        gap: ${theme.space[4]};
 
         @media ${theme.mq.tablet} {
           flex-direction: row;
+          margin-bottom: ${theme.space[10]};
+          gap: ${theme.space[5]};
         }
 
         .util {
@@ -96,7 +98,51 @@ export const Footer = styled.footer`
         display: flex;
         align-items: center;
         flex: 2;
+        flex-direction: column-reverse;
         justify-content: space-between;
+        line-height: 2.25;
+
+        @media ${theme.mq.tablet} {
+          flex-direction: row;
+        }
+
+        .nav {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+
+          @media ${theme.mq.tablet} {
+            flex-direction: row;
+          }
+
+          &__links {
+            display: flex;
+            align-items: center;
+            flex-direction: column-reverse;
+
+            @media ${theme.mq.tablet} {
+              flex-direction: row;
+            }
+
+            a {
+              margin: 0;
+
+              @media ${theme.mq.tablet} {
+                margin-left: ${theme.space[5]};
+              }
+            }
+          }
+
+          .logo {
+            display: flex;
+            margin: ${theme.space[6]} 0;
+
+            @media ${theme.mq.tablet} {
+              margin: 0;
+              margin-left: ${theme.space[6]};
+            }
+          }
+        }
       }
     }
   }

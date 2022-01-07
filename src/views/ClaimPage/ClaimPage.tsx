@@ -2,7 +2,6 @@
 // ___________________________________________________________________
 
 import React, { useState } from 'react'
-import * as qs from 'query-string'
 
 // Theme + ui
 import {
@@ -24,7 +23,7 @@ import * as S from './styles.scss'
 import Section from '../../components/Section'
 
 // SVG
-import Globe from '../../../static/globe.svg'
+import LogoGlobe from '../../../static/logo-globe.svg'
 
 import regTypes from './regTypes.json'
 
@@ -37,7 +36,7 @@ const ClaimPage = () => {
   const [email, setEmail] = useState('')
   const [organization, setOrganization] = useState('')
   const [comments, setComments] = useState('')
-  const [regTypeList, setRegTypeList] = useState<string[]>([])
+  const [regType, setRegType] = useState('')
   const [error, setError] = useState<string | undefined>('')
   const [loading, setLoading] = useState(false)
 
@@ -48,21 +47,21 @@ const ClaimPage = () => {
     email,
     organization,
     comments,
-    // regTypeList,
+    regType,
   }
 
   // const handleChange = (e: React.ChangeEvent<HTMLInputElement>) =>
   //   setFormState({ ...formState, [e.target.name]: e.target.value })
 
-  const handleCheckboxChange = ({
-    target,
-  }: React.ChangeEvent<HTMLInputElement>) => {
-    let newArray = [...regTypeList, target.id]
-    if (regTypeList.includes(target.id)) {
-      newArray = newArray.filter((regType) => regType !== target.id)
-    }
-    setRegTypeList(newArray)
-  }
+  // const handleCheckboxChange = ({
+  //   target,
+  // }: React.ChangeEvent<HTMLInputElement>) => {
+  //   let newArray = [...regTypeList, target.id]
+  //   if (regTypeList.includes(target.id)) {
+  //     newArray = newArray.filter((regType) => regType !== target.id)
+  //   }
+  //   setRegTypeList(newArray)
+  // }
 
   const handleTldChange = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
     setTld(target.value)
@@ -84,6 +83,12 @@ const ClaimPage = () => {
     target,
   }: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(target.value)
+  }
+
+  const handleSelectChange = ({
+    target,
+  }: React.ChangeEvent<HTMLSelectElement>) => {
+    setRegType(target.value)
   }
 
   const handleOrganizationChange = ({
@@ -131,15 +136,26 @@ const ClaimPage = () => {
   return (
     <>
       <Section maxWidth={1024} pt={[6, 7, 7]} pb={[6, 7, 7]}>
-        <Flex sx={{ flexDirection: ['column', 'row'], gap: [5, 6, 7] }}>
-          <Box sx={{ flex: 1.5 }}>
+        <Flex
+          sx={{
+            alignItems: 'center',
+            flexDirection: ['column-reverse', 'row'],
+            gap: [5, 6, 7],
+          }}
+        >
+          <Box sx={{ flex: [1, 2, 1] }}>
             <h1>Let&apos;s claim your TLD/</h1>
             <p id="descriptionSubmit">
               Begin your Handshake registration process by submitting the
               information below.
             </p>
           </Box>
-          <Box sx={{ flex: 1 }} />
+
+          <Box sx={{ flex: 1, px: [6, 0] }}>
+            <Flex sx={{ pl: [0, 4, 8] }}>
+              <LogoGlobe />
+            </Flex>
+          </Box>
         </Flex>
       </Section>
 
@@ -229,19 +245,25 @@ const ClaimPage = () => {
               ))}
             </div> */}
 
-            {/* <div className="form-group">
+            <div className="form-group">
               <Select
                 defaultValue="Select your industry"
                 name="lastName"
                 id="lastName"
                 placeholder="Select your industry"
+                onChange={handleSelectChange}
+                value={regType}
               >
-                <option>eCommerce</option>
-                <option>Saas</option>
-                <option>IT / Networking</option>
-                <option>Construction</option>
+                <option value="" disabled selected>
+                  I&apos;m registering a
+                </option>
+                {regTypes.map(({ name }, idx) => (
+                  <option value={name} key={idx}>
+                    {name}
+                  </option>
+                ))}
               </Select>
-            </div> */}
+            </div>
 
             <div className="form-group">
               <Label className="input-label" htmlFor="organization">

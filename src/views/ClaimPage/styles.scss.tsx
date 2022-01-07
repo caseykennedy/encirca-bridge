@@ -71,7 +71,7 @@ export const ClaimForm = styled.form`
       }
 
       &.tld {
-        background-color: ${theme.colors.secondary};
+        background-color: ${darken(0.1, theme.colors.secondary)};
       }
     }
 
@@ -80,14 +80,21 @@ export const ClaimForm = styled.form`
       border-radius: ${theme.borderRadius};
       color: ${theme.colors.text};
       font-size: ${theme.fontSizes[2]};
+      font-weight: 500;
+      text-transform: capitalize;
       margin-bottom: ${theme.space[3]};
       padding: ${theme.space[3]};
 
       @media ${theme.mq.tablet} {
-        font-size: ${theme.fontSizes[4]};
         margin-bottom: ${theme.space[4]};
         padding: ${theme.space[4]};
         height: ${theme.inputHeight};
+      }
+
+      &:focus {
+        outline: none;
+        border-color: ${theme.colors.primary};
+        box-shadow: ${inputGlow};
       }
     }
 
@@ -96,6 +103,7 @@ export const ClaimForm = styled.form`
       border-radius: ${theme.borderRadius};
       color: ${theme.colors.text};
       font-size: ${theme.fontSizes[2]};
+      font-weight: 500;
       margin-bottom: ${theme.space[3]};
       padding: ${theme.space[3]};
 

@@ -45,9 +45,9 @@ const Navigation = () => {
         />
       </Flex> */}
 
-      <Link to="/claim" className="btn">
+      <Link to="/claim" className="claim-btn">
         <Button variant="outline">
-          Claim your name
+          Claim a TLD
           <Icon name="chevron" />
         </Button>
       </Link>

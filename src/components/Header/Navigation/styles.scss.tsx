@@ -32,15 +32,15 @@ export const Nav = styled.nav`
       align-items: center;
       justify-content: center;
 
-      margin-right: ${theme.space[1]};
-      height: 18px;
-      width: 18px;
-
       border: ${theme.border};
       border-radius: 99px;
       border-color: ${theme.colors.gray};
       font-size: calc(${theme.fontSizes[2]} / 1.5);
       font-weight: 600;
+
+      margin-right: ${theme.space[1]};
+      height: 18px;
+      width: 18px;
     }
 
     &.active,
@@ -53,9 +53,14 @@ export const Nav = styled.nav`
     }
   }
 
-  .btn {
+  .claim-btn {
     span {
+      display: none;
       margin-left: ${theme.space[4]};
+
+      @media ${theme.mq.tablet} {
+        display: block;
+      }
 
       svg {
         fill: ${theme.colors.gray};

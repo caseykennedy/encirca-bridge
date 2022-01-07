@@ -222,6 +222,7 @@ const theme: ThemeShape = {
 
   buttons: {
     primary: {
+      fontSize: 2,
       fontWeight: 500,
       bg: 'primary',
       border: '1px solid',
@@ -232,8 +233,8 @@ const theme: ThemeShape = {
       display: 'flex',
       alignItems: 'center',
       lineHeight: '1.5',
-      py: 2,
-      px: 4,
+      py: [1, 2],
+      px: [3, 4],
       '&:hover': {
         bg: darken(0.15, '#0F95A7'),
       },
@@ -257,8 +258,8 @@ const theme: ThemeShape = {
       display: 'flex',
       alignItems: 'center',
       lineHeight: '1.5',
-      py: 2,
-      px: 4,
+      py: [1, 2],
+      px: [3, 4],
       '&:hover': {
         bg: darken(0.25, '#0F95A7'),
       },
