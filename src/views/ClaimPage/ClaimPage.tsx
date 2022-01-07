@@ -50,6 +50,8 @@ const ClaimPage = () => {
     regType,
   }
 
+  console.log(formData)
+
   // const handleChange = (e: React.ChangeEvent<HTMLInputElement>) =>
   //   setFormState({ ...formState, [e.target.name]: e.target.value })
 
@@ -118,13 +120,13 @@ const ClaimPage = () => {
       .then((response) => {
         console.log('response', response)
         setLoading(false)
-        // setTld('')
-        // setFirstName('')
-        // setLastName('')
-        // setEmail('')
-        // setOrganization('')
-        // setComments('')
-        // setRegTypeList([])
+        setTld('')
+        setFirstName('')
+        setLastName('')
+        setEmail('')
+        setOrganization('')
+        setComments('')
+        setRegType('')
       })
       .catch((e: undefined) => {
         setError(e)
@@ -159,7 +161,7 @@ const ClaimPage = () => {
         </Flex>
       </Section>
 
-      <Section border={true} maxWidth={1024} pt={[6, 7, 7]}>
+      <Section border={true} maxWidth={1024} pt={[6, 7, 7]} pb={[6, 7, 7]}>
         <S.ClaimForm
           className="claim-form"
           data-netlify="true"
@@ -247,14 +249,14 @@ const ClaimPage = () => {
 
             <div className="form-group">
               <Select
-                defaultValue="Select your industry"
+                // defaultValue="Select your industry"
                 name="lastName"
                 id="lastName"
                 placeholder="Select your industry"
                 onChange={handleSelectChange}
                 value={regType}
               >
-                <option value="" disabled selected>
+                <option value="" disabled>
                   I&apos;m registering a
                 </option>
                 {regTypes.map(({ name }, idx) => (
