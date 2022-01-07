@@ -248,11 +248,17 @@ const ClaimPage = () => {
             </div> */}
 
             <div className="form-group">
+            <Label
+                className="input-label"
+                htmlFor="regType"
+                style={{ display: 'none' }}
+              >
+                Registration type
+              </Label>
               <Select
                 // defaultValue="Select your industry"
-                name="lastName"
-                id="lastName"
-                placeholder="Select your industry"
+                name="regType"
+                id="regType"
                 onChange={handleSelectChange}
                 value={regType}
               >
