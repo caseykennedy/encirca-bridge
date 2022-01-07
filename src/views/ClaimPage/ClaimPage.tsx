@@ -39,6 +39,7 @@ const ClaimPage = () => {
   const [regType, setRegType] = useState('')
   const [error, setError] = useState<string | undefined>('')
   const [loading, setLoading] = useState(false)
+  const [showForm, setShowForm] = useState(true)
 
   const formData = {
     tld,
@@ -120,6 +121,7 @@ const ClaimPage = () => {
       .then((response) => {
         console.log('response', response)
         setLoading(false)
+        setShowForm(false)
         setTld('')
         setFirstName('')
         setLastName('')
@@ -162,77 +164,78 @@ const ClaimPage = () => {
       </Section>
 
       <Section border={true} maxWidth={1024} pt={[6, 7, 7]} pb={[6, 7, 7]}>
-        <S.ClaimForm
-          className="claim-form"
-          data-netlify="true"
-          method="post"
-          onSubmit={handleSubmit}
-          id="claimDomainForm"
-        >
-          <input type="hidden" name="form-name" value="claimDomainForm" />
-          <fieldset>
-            <div className="form-group">
-              <Label className="input-label" htmlFor="tld">
-                TLD*
-              </Label>
-              <Input
-                name="tld"
-                type="text"
-                id="tld"
-                className="tld"
-                value={tld}
-                onChange={handleTldChange}
-                required={true}
-                aria-required="true"
-              />
-            </div>
+        {showForm ? (
+          <S.ClaimForm
+            className="claim-form"
+            data-netlify="true"
+            method="post"
+            onSubmit={handleSubmit}
+            id="claimDomainForm"
+          >
+            <input type="hidden" name="form-name" value="claimDomainForm" />
+            <fieldset>
+              <div className="form-group">
+                <Label className="input-label" htmlFor="tld">
+                  TLD*
+                </Label>
+                <Input
+                  name="tld"
+                  type="text"
+                  id="tld"
+                  className="tld"
+                  value={tld}
+                  onChange={handleTldChange}
+                  required={true}
+                  aria-required="true"
+                />
+              </div>
 
-            <div className="form-group">
-              <Label className="input-label" htmlFor="firstName">
-                First name*
-              </Label>
-              <Input
-                name="firstName"
-                type="text"
-                id="firstName"
-                value={firstName}
-                onChange={handleFirstNameChange}
-                required={true}
-                aria-required="true"
-              />
-            </div>
+              <div className="form-group">
+                <Label className="input-label" htmlFor="firstName">
+                  First name*
+                </Label>
+                <Input
+                  name="firstName"
+                  type="text"
+                  id="firstName"
+                  value={firstName}
+                  onChange={handleFirstNameChange}
+                  required={true}
+                  aria-required="true"
+                />
+              </div>
 
-            <div className="form-group">
-              <Label className="input-label" htmlFor="lastName">
-                Last name*
-              </Label>
-              <Input
-                name="lastName"
-                type="text"
-                id="lastName"
-                value={lastName}
-                onChange={handleLastNameChange}
-                required={true}
-                aria-required="true"
-              />
-            </div>
+              <div className="form-group">
+                <Label className="input-label" htmlFor="lastName">
+                  Last name*
+                </Label>
+                <Input
+                  name="lastName"
+                  type="text"
+                  id="lastName"
+                  value={lastName}
+                  onChange={handleLastNameChange}
+                  required={true}
+                  aria-required="true"
+                />
+              </div>
 
-            <div className="form-group">
-              <Label className="input-label" htmlFor="email">
-                Email*
-              </Label>
-              <Input
-                name="email"
-                type="email"
-                id="email"
-                value={email}
-                onChange={handleEmailChange}
-                required={true}
-                aria-required="true"
-              />
-            </div>
+              <div className="form-group">
+                <Label className="input-label" htmlFor="email">
+                  Email*
+                </Label>
+                <Input
+                  name="email"
+                  type="email"
+                  id="email"
+                  value={email}
+                  onChange={handleEmailChange}
+                  required={true}
+                  aria-required="true"
+                />
+              </div>
 
-            {/* <div className="form-group  form-group__checkbox">
+              {/* <div className="form-group  form-group__checkbox">
               <div className="title">I&apos;m registering a:</div>
 
               {regTypes.map(({ name }, index) => (
@@ -247,79 +250,85 @@ const ClaimPage = () => {
               ))}
             </div> */}
 
-            <div className="form-group">
-            <Label
-                className="input-label"
-                htmlFor="regType"
-                style={{ display: 'none' }}
-              >
-                Registration type
-              </Label>
-              <Select
-                // defaultValue="Select your industry"
-                name="regType"
-                id="regType"
-                onChange={handleSelectChange}
-                value={regType}
-              >
-                <option value="" disabled>
-                  I&apos;m registering a
-                </option>
-                {regTypes.map(({ name }, idx) => (
-                  <option value={name} key={idx}>
-                    {name}
+              <div className="form-group">
+                <Label
+                  className="input-label"
+                  htmlFor="regType"
+                  style={{ display: 'none' }}
+                >
+                  Registration type
+                </Label>
+                <Select
+                  // defaultValue="Select your industry"
+                  name="regType"
+                  id="regType"
+                  onChange={handleSelectChange}
+                  value={regType}
+                >
+                  <option value="" disabled>
+                    I&apos;m registering a
                   </option>
-                ))}
-              </Select>
-            </div>
+                  {regTypes.map(({ name }, idx) => (
+                    <option value={name} key={idx}>
+                      {name}
+                    </option>
+                  ))}
+                </Select>
+              </div>
 
-            <div className="form-group">
-              <Label className="input-label" htmlFor="organization">
-                Organization
-              </Label>
-              <Input
-                name="organization"
-                type="text"
-                id="organization"
-                value={organization}
-                onChange={handleOrganizationChange}
-              />
-            </div>
+              <div className="form-group">
+                <Label className="input-label" htmlFor="organization">
+                  Organization
+                </Label>
+                <Input
+                  name="organization"
+                  type="text"
+                  id="organization"
+                  value={organization}
+                  onChange={handleOrganizationChange}
+                />
+              </div>
 
-            <div className="form-group">
-              <Label
-                className="input-label"
-                htmlFor="comments"
-                style={{ display: 'none' }}
+              <div className="form-group">
+                <Label
+                  className="input-label"
+                  htmlFor="comments"
+                  style={{ display: 'none' }}
+                >
+                  Comments
+                </Label>
+                <Textarea
+                  name="comments"
+                  id="comments"
+                  placeholder="Comments"
+                  rows={5}
+                  value={comments}
+                  onChange={handleCommentsChange}
+                />
+              </div>
+            </fieldset>
+
+            <div className="button-box">
+              {error && (
+                <Text as="p" color="red">
+                  {error}
+                </Text>
+              )}
+              <Button
+                type="submit"
+                aria-label="submit"
+                aria-describedby="descriptionSubmit"
               >
-                Comments
-              </Label>
-              <Textarea
-                name="comments"
-                id="comments"
-                placeholder="Comments"
-                rows={5}
-                value={comments}
-                onChange={handleCommentsChange}
-              />
+                {loading ? 'Sending...' : 'Submit'}
+              </Button>
             </div>
-          </fieldset>
-
-          <div className="button-box">
-            {error && (
-              <Text as="p" color="red">
-                {error}
-              </Text>
-            )}
-            <Button
-              type="submit"
-              aria-label="submit"
-              aria-describedby="descriptionSubmit"
-            >
-              {loading ? 'Sending...' : 'Submit'}
-            </Button>
-          </div>
-        </S.ClaimForm>
+          </S.ClaimForm>
+        ) : (
+          <Box>
+            <h2>Thank you!</h2>
+            <p>Someone will be in touch soon.</p>
+          </Box>
+        )}
       </Section>
     </>
   )
