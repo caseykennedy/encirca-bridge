@@ -21,6 +21,7 @@ import * as S from './styles.scss'
 
 // Components
 import Section from '../../components/Section'
+import FadeIn from '../../components/FadeIn'
 
 // SVG
 import LogoGlobe from '../../../static/logo-globe.svg'
@@ -157,7 +158,9 @@ const ClaimPage = () => {
 
           <Box sx={{ flex: 1, px: [6, 0] }}>
             <Flex sx={{ pl: [0, 4, 8] }}>
-              <LogoGlobe />
+              <FadeIn>
+                <LogoGlobe />
+              </FadeIn>
             </Flex>
           </Box>
         </Flex>
