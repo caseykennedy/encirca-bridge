@@ -136,12 +136,13 @@ export const ClaimForm = styled.form`
         margin-bottom: ${theme.space[5]};
       }
 
-      &:nth-child(n5) {
+      /* &:nth-child(n5) {
         flex-basis: 100%;
-      }
+      } */
 
       .title {
         display: flex;
+        flex: 1;
         align-items: center;
         justify-content: center;
         font-weight: 500;

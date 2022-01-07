@@ -13,21 +13,21 @@ import 'react-responsive-modal/styles.css'
 
 // ___________________________________________________________________
 
-export type LayoutProps = {
+type LayoutProps = {
   children: React.ReactNode
-  location?: {
+  location: {
     pathname: string
   }
 }
 
-const Layout = ({ children }: LayoutProps) => {
+const Layout = ({ children, location }: LayoutProps) => {
   console.log(
     `%c bridge | crafted with care | tetra/ | tetrashapes.com `,
-    `background: #78FFF2; color: #000000`
+    `background: #0F95A7; color: #000000`
   )
   return (
     <S.Wrapper>
-      <Header />
+      <Header location={location} />
       <S.Main>{children}</S.Main>
       <Footer />
     </S.Wrapper>

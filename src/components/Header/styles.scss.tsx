@@ -50,6 +50,14 @@ export const Logo = styled(Flex)`
   a {
     display: flex;
   }
+
+  svg {
+    width: 100px;
+
+    @media ${theme.mq.tablet} {
+      width: 118px;
+    }
+  }
 `
 
 export const Toggle = styled.div`

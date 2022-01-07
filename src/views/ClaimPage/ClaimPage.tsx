@@ -156,13 +156,13 @@ const ClaimPage = () => {
             </p>
           </Box>
 
-          <Box sx={{ flex: 1, px: [6, 0] }}>
+          <Flex sx={{ flex: 1, justifyContent: 'flex-end', px: [6, 0] }}>
             <Flex sx={{ pl: [0, 4, 8] }}>
               <FadeIn>
                 <LogoGlobe />
               </FadeIn>
             </Flex>
-          </Box>
+          </Flex>
         </Flex>
       </Section>
 
@@ -239,19 +239,19 @@ const ClaimPage = () => {
               </div>
 
               {/* <div className="form-group  form-group__checkbox">
-              <div className="title">I&apos;m registering a:</div>
+                <div className="title">I&apos;m registering a:</div>
 
-              {regTypes.map(({ name }, index) => (
-                <label className="checkbox-label" htmlFor={name} key={index}>
-                  <Checkbox
-                    id={name}
-                    name={name}
-                    onChange={handleCheckboxChange}
-                  />
-                  <span>{name}</span>
-                </label>
-              ))}
-            </div> */}
+                {regTypes.map(({ name }, index) => (
+                  <label className="checkbox-label" htmlFor={name} key={index}>
+                    <Checkbox
+                      id={name}
+                      name={name}
+                      // onChange={handleCheckboxChange}
+                    />
+                    <span>{name}</span>
+                  </label>
+                ))}
+              </div> */}
 
               <div className="form-group">
                 <Label

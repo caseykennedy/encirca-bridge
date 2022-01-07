@@ -52,7 +52,7 @@ const AcquireYourTld = () => {
   }, [])
 
   return (
-    <Box>
+    <Box sx={{ display: ['none', 'block'] }}>
       <Heading as="h4" mb={5}>
         How to acquire your TLD:
       </Heading>

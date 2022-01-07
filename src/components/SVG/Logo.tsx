@@ -6,7 +6,7 @@ import theme from '../../gatsby-plugin-theme-ui'
 const SVG = styled(motion.svg)``
 
 const Symbol = () => (
-  <SVG width="118" height="100%" viewBox="0 0 119 26" fill="none">
+  <SVG width="118" height="auto" viewBox="0 0 119 26" fill="none">
     <path
       d="M26.1799 20.5561L19.7922 14.5996H6.38775L0 20.5561H26.1799Z"
       fill="white"

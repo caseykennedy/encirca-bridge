@@ -15,10 +15,16 @@ import Icon from '../../Icons'
 
 // ___________________________________________________________________
 
-const Navigation = () => {
+type NavigationProps = {
+  pathname: string
+}
+
+const Navigation = ({ pathname }: NavigationProps) => {
   const [colorMode, setColorMode] = useColorMode()
   const [isDarkMode, setDarkMode] = useState(false)
   const isDark = colorMode === 'dark'
+
+  const isClaimPage = pathname === '/claim'
 
   // const toggleDarkMode = useCallback(
   //   (checked: boolean) => {
@@ -45,9 +51,9 @@ const Navigation = () => {
         />
       </Flex> */}
 
-      <Link to="/claim" className="claim-btn">
+      <Link to={isClaimPage ? '/' : '/claim'} className="claim-btn">
         <Button variant="outline">
-          Claim a TLD
+          {isClaimPage ? 'Learn more' : 'Claim your TLD'}
           <Icon name="chevron" />
         </Button>
       </Link>

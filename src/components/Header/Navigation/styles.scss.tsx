@@ -15,20 +15,19 @@ export const Nav = styled.nav`
   width: 100%;
 
   .faq {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: ${theme.space[4]};
-
+    margin-right: ${theme.space[3]};
     color: ${theme.colors.gray};
     font-weight: 500;
 
     @media ${theme.mq.tablet} {
-      display: flex;
+      margin-right: ${theme.space[4]};
     }
 
     span {
-      display: inline-flex;
+      display: none;
       align-items: center;
       justify-content: center;
 
@@ -41,6 +40,10 @@ export const Nav = styled.nav`
       margin-right: ${theme.space[1]};
       height: 18px;
       width: 18px;
+
+      @media ${theme.mq.tablet} {
+        display: inline-flex;
+      }
     }
 
     &.active,

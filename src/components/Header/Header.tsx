@@ -18,7 +18,14 @@ import Logo from '../SVG/Logo'
 
 // ___________________________________________________________________
 
-const Header = () => {
+type HeaderProps = {
+  location: {
+    pathname: string
+  }
+}
+
+const Header = ({ location }: HeaderProps) => {
+  console.log(location)
   const [isNavOpen, setNavOpen] = useState(false)
   const toggleMenu = () => setNavOpen(!isNavOpen)
   return (
@@ -32,7 +39,7 @@ const Header = () => {
           </S.Logo>
 
           <S.Menu>
-            <Navigation />
+            <Navigation pathname={location.pathname} />
 
             {/* <S.Toggle onClick={toggleMenu} aria-label="toggle menu">
               <HamburgerMenu
