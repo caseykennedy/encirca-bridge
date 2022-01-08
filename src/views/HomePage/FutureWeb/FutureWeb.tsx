@@ -62,7 +62,7 @@ const FutureWeb = () => (
               brand new name, We’ll help aquire your name on the dWeb.
             </p>
             <a href="/" target="_blank" className="text--link">
-              Claim your name
+              Claim your TLD
             </a>
           </Box>
         </Box>
