@@ -32,7 +32,7 @@ import regTypes from './regTypes.json'
 
 type Props = {
   location: {
-    state: {
+    state?: {
       tld: string
     }
   }
@@ -50,7 +50,7 @@ function scrollToTop() {
 }
 
 const ClaimPage = ({ location }: Props) => {
-  const tldClaim = location.state.tld
+  const tldClaim = location.state?.tld
   const [tld, setTld] = useState(tldClaim || '')
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
