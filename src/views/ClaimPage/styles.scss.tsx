@@ -38,6 +38,11 @@ export const ClaimForm = styled.form`
         left: ${theme.space[4]};
         width: fit-content;
       }
+
+      &--textarea {
+        align-items: flex-start;
+        top: ${theme.space[3]};
+      }
     }
 
     input {
@@ -108,8 +113,8 @@ export const ClaimForm = styled.form`
       padding: ${theme.space[3]};
 
       @media ${theme.mq.tablet} {
-        /* font-size: ${theme.fontSizes[3]}; */
         margin-bottom: ${theme.space[4]};
+        padding-left: ${theme.space[9]};
       }
 
       &:focus {

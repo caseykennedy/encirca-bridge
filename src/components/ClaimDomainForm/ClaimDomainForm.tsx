@@ -17,6 +17,7 @@ const ClaimDomainForm = () => {
   const handleChange = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
     setTld(target.value)
   }
+  
   return (
     <S.ClaimDomainForm>
       <Label id="descriptionClaim" htmlFor="tld" sx={{ display: 'none' }}>

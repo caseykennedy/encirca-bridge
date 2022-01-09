@@ -158,7 +158,7 @@ const ClaimPage = ({ location }: Props) => {
 
   return (
     <>
-      <Section pt={[6, 7, 7]} pb={[6, 7, 7]}>
+      <Section maxWidth={1024} pt={[6, 7, 7]} pb={[6, 7, 7]}>
         <Flex
           sx={{
             alignItems: 'center',
@@ -281,11 +281,7 @@ const ClaimPage = ({ location }: Props) => {
               </div> */}
 
               <div className="form-group">
-                <Label
-                  className="input-label"
-                  htmlFor="regType"
-                  style={{ display: 'none' }}
-                >
+                <Label htmlFor="regType" sx={{ display: 'none' }}>
                   Registration type
                 </Label>
                 <Select
@@ -321,16 +317,15 @@ const ClaimPage = ({ location }: Props) => {
 
               <div className="form-group">
                 <Label
-                  className="input-label"
                   htmlFor="comments"
-                  style={{ display: 'none' }}
+                  className="input-label  input-label--textarea"
                 >
                   Comments
                 </Label>
                 <Textarea
                   name="comments"
                   id="comments"
-                  placeholder="Comments"
+                  // placeholder="Comments"
                   rows={5}
                   value={comments}
                   onChange={handleCommentsChange}
