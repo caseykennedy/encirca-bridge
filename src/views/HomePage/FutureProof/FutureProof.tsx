@@ -45,7 +45,7 @@ const FutureProof = () => (
           realty, own it.
         </p>
 
-        <Link to="/">
+        <Link to="/claim">
           <Button px={5} py={3}>
             Claim your TLD
             <Icon name="chevron" />

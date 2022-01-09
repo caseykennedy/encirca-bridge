@@ -13,14 +13,14 @@ import 'react-responsive-modal/styles.css'
 
 // ___________________________________________________________________
 
-type LayoutProps = {
+type Props = {
   children: React.ReactNode
   location: {
     pathname: string
   }
 }
 
-const Layout = ({ children, location }: LayoutProps) => {
+const Layout = ({ children, location }: Props) => {
   console.log(
     `%c bridge | crafted with care | tetra/ | tetrashapes.com `,
     `background: #0F95A7; color: #000000`

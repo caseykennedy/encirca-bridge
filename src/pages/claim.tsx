@@ -7,10 +7,18 @@ import ClaimPage from '../views/ClaimPage'
 
 // ___________________________________________________________________
 
-const Claim = () => (
+type Props = {
+  location: {
+    state: {
+      tld: string
+    }
+  }
+}
+
+const Claim = ({ location }: Props) => (
   <>
     <SEO />
-    <ClaimPage />
+    <ClaimPage location={location} />
   </>
 )
 

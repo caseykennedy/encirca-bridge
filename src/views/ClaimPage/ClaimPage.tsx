@@ -30,8 +30,28 @@ import regTypes from './regTypes.json'
 
 // ___________________________________________________________________
 
-const ClaimPage = () => {
-  const [tld, setTld] = useState('')
+type Props = {
+  location: {
+    state: {
+      tld: string
+    }
+  }
+}
+
+const isWindow = typeof window !== 'undefined'
+
+function scrollToTop() {
+  if (isWindow) {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    })
+  }
+}
+
+const ClaimPage = ({ location }: Props) => {
+  const tldClaim = location.state.tld
+  const [tld, setTld] = useState(tldClaim || '')
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
   const [email, setEmail] = useState('')
@@ -51,8 +71,6 @@ const ClaimPage = () => {
     comments,
     regType,
   }
-
-  console.log(formData)
 
   // const handleChange = (e: React.ChangeEvent<HTMLInputElement>) =>
   //   setFormState({ ...formState, [e.target.name]: e.target.value })
@@ -130,17 +148,17 @@ const ClaimPage = () => {
         setOrganization('')
         setComments('')
         setRegType('')
+        scrollToTop()
       })
       .catch((e: undefined) => {
         setError(e)
-        console.log('ERROR')
         console.log('error:', e)
       })
   }
 
   return (
     <>
-      <Section maxWidth={1024} pt={[6, 7, 7]} pb={[6, 7, 7]}>
+      <Section pt={[6, 7, 7]} pb={[6, 7, 7]}>
         <Flex
           sx={{
             alignItems: 'center',
@@ -148,12 +166,21 @@ const ClaimPage = () => {
             gap: [5, 6, 7],
           }}
         >
-          <Box sx={{ flex: [1, 2, 1] }}>
-            <h1>Let&apos;s claim your TLD/</h1>
-            <p id="descriptionSubmit">
-              Begin your Handshake registration process by submitting the
-              information below.
-            </p>
+          <Box sx={{ flex: [1, 2, 1], width: '100%' }}>
+            {showForm ? (
+              <>
+                <h1>Let&apos;s claim your TLD/</h1>
+                <p id="descriptionSubmit">
+                  Begin your Handshake registration process by submitting the
+                  information below.
+                </p>
+              </>
+            ) : (
+              <>
+                <h1>Thank you!</h1>
+                <p>Someone will be in touch soon.</p>
+              </>
+            )}
           </Box>
 
           <Flex sx={{ flex: 1, justifyContent: 'flex-end', px: [6, 0] }}>
@@ -328,7 +355,7 @@ const ClaimPage = () => {
           </S.ClaimForm>
         ) : (
           <Box>
-            <h2>Thank you!</h2>
+            <h2>Next steps</h2>
             <p>Someone will be in touch soon.</p>
           </Box>
         )}

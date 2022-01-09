@@ -18,14 +18,13 @@ import Logo from '../SVG/Logo'
 
 // ___________________________________________________________________
 
-type HeaderProps = {
+type Props = {
   location: {
     pathname: string
   }
 }
 
-const Header = ({ location }: HeaderProps) => {
-  console.log(location)
+const Header = ({ location }: Props) => {
   const [isNavOpen, setNavOpen] = useState(false)
   const toggleMenu = () => setNavOpen(!isNavOpen)
   return (
