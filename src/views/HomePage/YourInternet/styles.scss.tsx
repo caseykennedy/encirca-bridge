@@ -16,7 +16,7 @@ export const HandshakeFeatures = styled.div`
   background: ${theme.colors.secondary};
   border-radius: calc(${theme.borderRadiusLarge} / 2);
   margin: ${theme.space[5]} 0;
-  padding: ${theme.space[6]};
+  padding: ${theme.space[5]};
   position: relative;
   width: 100%;
 
@@ -31,18 +31,28 @@ export const HandshakeFeatures = styled.div`
     justify-content: center;
 
     position: absolute;
-    top: calc(${HandshakeRadius} * -0.5);
+    top: calc(${HandshakeRadius} * -0.35);
 
     background: ${theme.colors.background};
     border: ${theme.border};
     border-color: ${theme.colors.primary};
     border-radius: 99px;
     border-width: 2px;
-    height: ${HandshakeRadius};
-    width: ${HandshakeRadius};
+    height: calc(${HandshakeRadius} / 1.5);
+    width: calc(${HandshakeRadius} / 1.5);
+
+    @media ${theme.mq.tablet} {
+      top: calc(${HandshakeRadius} * -0.5);
+      height: ${HandshakeRadius};
+      width: ${HandshakeRadius};
+    }
 
     svg {
-      width: 60px;
+      width: 40px;
+
+      @media ${theme.mq.tablet} {
+        width: 60px;
+      }
     }
   }
 `
@@ -80,7 +90,7 @@ export const LearnMore = styled.div`
       }
 
       svg {
-        max-height: 200px;
+        max-height: 150px;
 
         @media ${theme.mq.tablet} {
           max-height: 230px;
@@ -114,6 +124,7 @@ export const LearnMore = styled.div`
       display: flex;
       align-items: center;
       justify-content: space-between;
+      white-space: pre-line;
 
       svg {
         width: ${theme.space[3]};

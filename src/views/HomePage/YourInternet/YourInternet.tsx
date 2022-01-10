@@ -157,9 +157,17 @@ const YourInternet = () => (
         <Box>
           <Swiper
             slidesPerView="auto"
-            spaceBetween={25}
+            spaceBetween={16}
             pagination={{
               clickable: true,
+            }}
+            breakpoints={{
+              '640': {
+                spaceBetween: 16,
+              },
+              '768': {
+                spaceBetween: 24,
+              },
             }}
           >
             {hnsLinks.map((item, idx) => (
