@@ -8,6 +8,8 @@ import theme from '../../gatsby-plugin-theme-ui'
 
 // ___________________________________________________________________
 
+const mobileInputHeight = `calc(${theme.inputHeight} / 1.25)`
+
 export const ClaimDomainForm = styled.form`
   display: flex;
   align-items: center;
@@ -26,14 +28,20 @@ export const ClaimDomainForm = styled.form`
     border: 1px solid ${theme.colors.primary};
     border-radius: ${theme.borderRadius};
     color: ${theme.colors.text};
-    font-size: ${theme.fontSizes[3]};
-    padding: ${theme.space[4]} ${theme.space[7]};
-    height: ${theme.inputHeight};
+    font-size: ${theme.fontSizes[2]};
+    padding: ${theme.space[3]} ${theme.space[6]};
+    height: ${mobileInputHeight};
     width: 100%;
     outline: none;
 
     &::placeholder {
       color: ${theme.colors.gray};
+    }
+
+    @media ${theme.mq.tablet} {
+      font-size: ${theme.fontSizes[3]};
+      padding: ${theme.space[4]} ${theme.space[7]};
+      height: ${theme.inputHeight};
     }
   }
 
@@ -46,12 +54,21 @@ export const ClaimDomainForm = styled.form`
     position: absolute;
     top: 0;
     right: 0;
-    height: ${theme.inputHeight};
+    height: ${mobileInputHeight};
+
+    @media ${theme.mq.tablet} {
+      height: ${theme.inputHeight};
+    }
 
     button {
       border: 1px solid ${theme.colors.primary};
-      font-size: ${theme.fontSizes[3]};
-      padding: ${theme.space[4]};
+      font-size: ${theme.fontSizes[2]};
+      padding: ${theme.space[3]};
+
+      @media ${theme.mq.tablet} {
+        font-size: ${theme.fontSizes[3]};
+        padding: ${theme.space[4]};
+      }
     }
   }
 
@@ -63,8 +80,22 @@ export const ClaimDomainForm = styled.form`
     position: absolute;
     top: 0;
     left: 0;
-    height: ${theme.inputHeight};
-    width: 100px;
+
+    height: ${mobileInputHeight};
+    width: 60px;
+
+    @media ${theme.mq.tablet} {
+      height: ${theme.inputHeight};
+      width: 100px;
+    }
+
+    svg {
+      width: 28px;
+
+      @media ${theme.mq.tablet} {
+        width: 35px;
+      }
+    }
   }
 `
 

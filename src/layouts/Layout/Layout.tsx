@@ -4,8 +4,8 @@
 import React, { useRef } from 'react'
 
 // Components
-import Header from '../Header'
-import Footer from '../Footer'
+import Header from '../../components/Header'
+import Footer from '../../components/Footer'
 
 // Styles + Theme
 import * as S from './styles.scss'
@@ -23,7 +23,7 @@ type Props = {
 const Layout = ({ children, location }: Props) => {
   console.log(
     `%c bridge | crafted with care | tetra/ | tetrashapes.com `,
-    `background: #0F95A7; color: #000000`
+    `background: #000000; color: #0F95A7`
   )
   return (
     <S.Wrapper>

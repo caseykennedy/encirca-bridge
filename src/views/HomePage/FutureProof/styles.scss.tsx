@@ -60,11 +60,19 @@ export const FutureProof = styled.div`
       background: ${theme.colors.background};
       border: ${theme.border};
       border-color: ${theme.colors.primary};
-      border-radius: 99px;
+      border-radius: ${theme.borderRadiusLarge};
       border-width: 2px;
 
+      @media ${theme.mq.tablet} {
+        padding: ${theme.space[3]} ${theme.space[4]};
+      }
+
       svg {
-        width: 60px;
+        width: 40px;
+
+        @media ${theme.mq.tablet} {
+          width: 60px;
+        }
       }
     }
   }

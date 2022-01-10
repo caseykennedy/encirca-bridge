@@ -4,14 +4,12 @@
 import * as React from 'react'
 
 // Theme + ui
-import { Box, Flex, Text } from 'theme-ui'
+import { Flex, Heading } from 'theme-ui'
 import theme from '../../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
 
 // Components
-import Section from '../../../components/Section'
 import ClaimDomainForm from '../../../components/ClaimDomainForm'
-import SymbolGlobe from '../../../components/SVG/SymbolGlobe'
 import PoweredBy from '../../../components/PoweredBy'
 
 // SVG
@@ -26,12 +24,14 @@ const ClaimYours = () => (
         <HandshakeSymbol fill="white" />
       </div>
 
-      <h2>Ready for your TLD?</h2>
+      <Heading as="h2" mt={[2, 0]} mb={3}>
+        Ready for your TLD?
+      </Heading>
     </Flex>
 
     <ClaimDomainForm />
 
-    <Flex sx={{ justifyContent: 'center', mt: 5 }}>
+    <Flex sx={{ justifyContent: 'center', mt: [4, 5] }}>
       <PoweredBy />
     </Flex>
   </S.ClaimYours>

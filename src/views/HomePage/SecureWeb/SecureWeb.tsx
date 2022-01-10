@@ -128,7 +128,7 @@ const SecureWeb = () => (
 
     <Timeline />
 
-    <S.Features>
+    <Box mb={[5, 0]}>
       <Box>
         <Heading as="h4" mb={5}>
           Why a<br />
@@ -162,7 +162,7 @@ const SecureWeb = () => (
           </Box>
         ))}
       </Grid>
-    </S.Features>
+    </Box>
   </Section>
 )
 

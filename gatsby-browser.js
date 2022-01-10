@@ -1,7 +1,7 @@
 // gatsby-browser
 
 import React from 'react'
-import Layout from './src/components/Layout'
+import Layout from './src/layouts/Layout'
 import GlobalStyles from './src/styles/global'
 
 // ___________________________________________________________________

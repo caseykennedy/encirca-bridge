@@ -90,9 +90,4 @@ export const Timeline = styled.div`
   }
 `
 
-export const Features = styled.div`
-  @media ${theme.mq.tablet} {
-  }
-`
-
 export default Timeline

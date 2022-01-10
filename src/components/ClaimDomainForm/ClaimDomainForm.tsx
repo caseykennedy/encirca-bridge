@@ -28,7 +28,7 @@ const ClaimDomainForm = () => {
         type="text"
         name="tld"
         id="tld"
-        placeholder="Enter your top-level domain"
+        placeholder="Enter your TLD"
         required={true}
         aria-required="true"
         value={tld}

@@ -18,18 +18,28 @@ export const ClaimYours = styled(Section)`
     justify-content: center;
 
     position: absolute;
-    top: calc(${HandshakeRadius} * -0.5);
+    top: calc(${HandshakeRadius} * -0.35);
 
     background: ${theme.colors.background};
     border: ${theme.border};
     /* border-color: ${theme.colors.primary}; */
     border-radius: 99px;
     border-width: 2px;
-    height: ${HandshakeRadius};
-    width: ${HandshakeRadius};
+    height: calc(${HandshakeRadius} / 1.5);
+    width: calc(${HandshakeRadius} / 1.5);
+
+    @media ${theme.mq.tablet} {
+      top: calc(${HandshakeRadius} * -0.5);
+      height: ${HandshakeRadius};
+      width: ${HandshakeRadius};
+    }
 
     svg {
-      width: 60px;
+      width: 40px;
+
+      @media ${theme.mq.tablet} {
+        width: 60px;
+      }
     }
   }
 `
