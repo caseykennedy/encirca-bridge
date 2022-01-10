@@ -48,7 +48,7 @@ export const Hero = styled(Box)`
           flex: 1;
           display: flex;
           justify-content: center;
-          padding: ${theme.space[5]} ${theme.space[6]};
+          padding: 0 ${theme.space[6]} ${theme.space[5]};
           width: 100%;
 
           @media ${theme.mq.tablet} {
