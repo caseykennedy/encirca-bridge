@@ -230,6 +230,10 @@ const Typography = css`
     margin: 0 0 ${theme.space[2]};
 
     @media ${theme.mq.tablet} {
+      font-size: ${theme.fontSizes[6]};
+    }
+
+    @media ${theme.mq.desktop} {
       font-size: ${theme.fontSizes[7]};
     }
   }

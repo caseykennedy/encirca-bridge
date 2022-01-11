@@ -28,10 +28,12 @@ export const ClaimForm = styled.form`
       align-items: center;
       font-size: ${theme.fontSizes[2]};
       font-weight: 500;
+      margin-bottom: ${theme.space[1]};
       width: fit-content;
 
       @media ${theme.mq.tablet} {
         margin-right: auto;
+        margin-bottom: 0;
         position: absolute;
         top: 0;
         bottom: 0;
@@ -39,7 +41,20 @@ export const ClaimForm = styled.form`
         width: fit-content;
       }
 
-      &--textarea {
+      &__tld {
+        svg {
+          /* fill: ${theme.colors.primary}; */
+          stroke: ${theme.colors.white};
+          margin-right: ${theme.space[2]};
+          width: 24px;
+
+          @media ${theme.mq.tablet} {
+            width: 35px;
+          }
+        }
+      }
+
+      &__textarea {
         align-items: flex-start;
         top: ${theme.space[3]};
       }
@@ -91,7 +106,8 @@ export const ClaimForm = styled.form`
       padding: ${theme.space[3]};
 
       @media ${theme.mq.tablet} {
-        margin-bottom: ${theme.space[4]};
+        /* font-size: ${theme.fontSizes[4]}; */
+        margin-bottom: calc(${theme.space[4]} * 1.5);
         padding: ${theme.space[4]};
         height: ${theme.inputHeight};
       }

@@ -25,7 +25,9 @@ import FadeIn from '../../components/FadeIn'
 
 // SVG
 import LogoGlobe from '../../../static/logo-globe.svg'
+import Globe from '../../../static/globe.svg'
 
+// Data
 import regTypes from './regTypes.json'
 
 // ___________________________________________________________________
@@ -205,7 +207,8 @@ const ClaimPage = ({ location }: Props) => {
             <input type="hidden" name="form-name" value="claimDomainForm" />
             <fieldset>
               <div className="form-group">
-                <Label className="input-label" htmlFor="tld">
+                <Label className="input-label  input-label__tld" htmlFor="tld">
+                  <Globe />
                   TLD*
                 </Label>
                 <Input
@@ -290,6 +293,26 @@ const ClaimPage = ({ location }: Props) => {
                   id="regType"
                   onChange={handleSelectChange}
                   value={regType}
+                  arrow={
+                    <Box
+                      as="svg"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="100%"
+                      height="100%"
+                      viewBox="0 0 24 24"
+                      fill="currentcolor"
+                      sx={{
+                        mt: [-14, -16],
+                        ml: [-44, -64],
+                        width: [35, 50],
+                        height: [35, 50],
+                        alignSelf: 'center',
+                        pointerEvents: 'none',
+                      }}
+                    >
+                      <path d="M7.41 7.84l4.59 4.58 4.59-4.58 1.41 1.41-6 6-6-6z" />
+                    </Box>
+                  }
                 >
                   <option value="" disabled>
                     I&apos;m registering a
@@ -318,7 +341,7 @@ const ClaimPage = ({ location }: Props) => {
               <div className="form-group">
                 <Label
                   htmlFor="comments"
-                  className="input-label  input-label--textarea"
+                  className="input-label  input-label__textarea"
                 >
                   Comments
                 </Label>
