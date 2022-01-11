@@ -29,7 +29,7 @@ export const ClaimDomainForm = styled.form`
     border-radius: ${theme.borderRadius};
     color: ${theme.colors.text};
     font-size: ${theme.fontSizes[2]};
-    padding: ${theme.space[3]} ${theme.space[6]};
+    padding: ${theme.space[3]};
     height: ${mobileInputHeight};
     width: 100%;
     outline: none;
@@ -73,7 +73,7 @@ export const ClaimDomainForm = styled.form`
   }
 
   .globe {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
 
@@ -85,6 +85,7 @@ export const ClaimDomainForm = styled.form`
     width: 60px;
 
     @media ${theme.mq.tablet} {
+      display: flex;
       height: ${theme.inputHeight};
       width: 100px;
     }

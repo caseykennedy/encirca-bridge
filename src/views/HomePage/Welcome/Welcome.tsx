@@ -17,14 +17,14 @@ import CentralizedDNS from '../../../../static/centralized-dns.svg'
 // ___________________________________________________________________
 
 const Welcome = () => (
-  <>
+  <Section border={true}>
     <Flex
       sx={{
         alignItems: ['flex-start', 'center'],
         flexDirection: ['column', 'row'],
-        gap: [6, 7],
+        gap: [6, 7, 8],
         justifyContent: 'space-between',
-        mb: 5,
+        mb: [6, 7],
       }}
     >
       <Box sx={{ flex: 1 }}>
@@ -43,7 +43,7 @@ const Welcome = () => (
     <FadeIn>
       <CentralizedDNS />
     </FadeIn>
-  </>
+  </Section>
 )
 
 export default Welcome

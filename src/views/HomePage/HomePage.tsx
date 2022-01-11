@@ -5,6 +5,7 @@ import * as React from 'react'
 
 // Sections
 import Hero from './Hero'
+import Welcome from './Welcome'
 import FutureWeb from './FutureWeb'
 import YourInternet from './YourInternet'
 import FutureProof from './FutureProof'
@@ -17,6 +18,7 @@ import Faq from './Faq'
 const HomePage = () => (
   <>
     <Hero />
+    <Welcome />
     <FutureWeb />
     <YourInternet />
     <FutureProof />

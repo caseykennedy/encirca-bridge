@@ -29,7 +29,7 @@ type RowProps = {
 export const Row = ({ children }: RowProps) => (
   <Box
     sx={{
-      pb: [6, 7, 7],
+      pb: [6, 7, 8],
       '&:last-child': {
         pb: 0,
       },

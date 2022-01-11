@@ -29,11 +29,10 @@ export const Hero = styled(Box)`
         align-items: center;
         flex-direction: column-reverse;
         justify-content: space-between;
-        gap: ${theme.space[5]};
+        gap: ${theme.space[6]};
 
         @media ${theme.mq.tablet} {
           flex-direction: row;
-          gap: ${theme.space[6]};
         }
 
         @media ${theme.mq.desktop} {
@@ -48,7 +47,7 @@ export const Hero = styled(Box)`
           flex: 1;
           display: flex;
           justify-content: center;
-          padding: 0 ${theme.space[6]} ${theme.space[5]};
+          padding: ${theme.space[5]} ${theme.space[7]};
           width: 100%;
 
           @media ${theme.mq.tablet} {
@@ -59,7 +58,6 @@ export const Hero = styled(Box)`
           @media ${theme.mq.desktop} {
             flex: 1;
             justify-content: flex-end;
-            padding: 0;
           }
 
           svg {

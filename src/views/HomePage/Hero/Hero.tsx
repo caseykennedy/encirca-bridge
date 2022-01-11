@@ -19,7 +19,7 @@ import Welcome from '../Welcome'
 // ___________________________________________________________________
 
 const Hero = () => (
-  <S.Hero pt={[6, 6, 7]} pb={theme.gutter.vertical}>
+  <S.Hero py={theme.gutter.vertical}>
     <Box px={theme.gutter.axis} className="hero__inner">
       <div className="billboard">
         <div className="message">
@@ -35,8 +35,7 @@ const Hero = () => (
 
           <Text as="p" pr={[0, 6, 7]}>
             A custodianship service for trademark holders on the dWeb — acquire
-            your Web 3.0 <strong>top-level domain (TLD)</strong> extension with ease and
-            assurance.
+            your web 3.0 <strong>top-level domain (TLD)</strong>.
           </Text>
 
           <PoweredBy />
@@ -49,10 +48,6 @@ const Hero = () => (
 
       <Box mt={theme.gutter.vertical}>
         <ClaimDomainForm />
-      </Box>
-
-      <Box mt={theme.gutter.vertical}>
-        <Welcome />
       </Box>
     </Box>
   </S.Hero>

@@ -23,7 +23,7 @@ import Solids from '../../../../static/solids.svg'
 // ___________________________________________________________________
 
 const FutureProof = () => (
-  <Section bg={darken(0.015, theme.colors.background)} border={true}>
+  <Section bg={darken(0.015, theme.colors.background)} border={false}>
     <S.FutureProof>
       <div className="decorator">
         <Solids />

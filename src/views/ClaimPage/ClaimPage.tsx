@@ -160,7 +160,7 @@ const ClaimPage = ({ location }: Props) => {
 
   return (
     <>
-      <Section maxWidth={1024} pt={[6, 7, 7]} pb={[6, 7, 7]}>
+      <Section pt={[6, 7, 7]} pb={[6, 7, 7]}>
         <Flex
           sx={{
             alignItems: 'center',
@@ -185,8 +185,8 @@ const ClaimPage = ({ location }: Props) => {
             )}
           </Box>
 
-          <Flex sx={{ flex: 1, justifyContent: 'flex-end', px: [6, 0] }}>
-            <Flex sx={{ pl: [0, 4, 8] }}>
+          <Flex sx={{ flex: 1, justifyContent: 'flex-end' }}>
+            <Flex sx={{ pr: [7, 0], pl: [7, 4, 8], py: [5, 0] }}>
               <FadeIn>
                 <LogoGlobe />
               </FadeIn>

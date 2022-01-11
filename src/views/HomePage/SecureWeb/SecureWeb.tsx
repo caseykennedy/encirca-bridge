@@ -106,7 +106,7 @@ const Timeline = () => (
 )
 
 const SecureWeb = () => (
-  <Section border={true}>
+  <Section border={false}>
     <Flex
       sx={{
         alignItems: ['flex-start', 'center'],

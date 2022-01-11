@@ -43,7 +43,7 @@ const features = [
 ]
 
 const FutureWeb = () => (
-  <Section border={true}>
+  <Section pt={0}>
     <Row>
       <Flex
         sx={{

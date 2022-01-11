@@ -14,6 +14,10 @@ export const AccordionContainer = styled.div`
   margin-bottom: ${theme.space[3]};
   position: relative;
   width: 100%;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 `
 
 export const AccordionInner = styled.div<{bg?: string}>`
