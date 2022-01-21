@@ -173,8 +173,7 @@ const ClaimPage = ({ location }: Props) => {
               <>
                 <h1>Let&apos;s claim your TLD/</h1>
                 <p id="descriptionSubmit">
-                  Begin your Handshake registration process by submitting the
-                  information below.
+                  Begin your Handshake registration process below.
                 </p>
               </>
             ) : (
